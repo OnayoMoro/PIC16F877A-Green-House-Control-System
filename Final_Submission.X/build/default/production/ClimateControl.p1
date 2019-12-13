@@ -1,0 +1,694 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"14 ./buzzer_header.h
+[; ;./buzzer_header.h: 14: void buzzer_init(void);
+[v _buzzer_init `(v ~T0 @X0 0 ef ]
+"25 ./clock_header.h
+[; ;./clock_header.h: 25: unsigned char time_read_1(void);
+[v _clock_init `(v ~T0 @X0 0 ef ]
+"17 ./lcd_driver.h
+[; ;./lcd_driver.h: 17: void lcd_init(void);
+[v _lcd_init `(v ~T0 @X0 0 ef ]
+"23 ./button_press_header.h
+[v _initialisation `(v ~T0 @X0 0 ef ]
+"68 ./temp_header.h
+[; ;./temp_header.h: 68: void get_temp(void);
+[v _get_temp `(v ~T0 @X0 0 ef ]
+"30 ./clock_header.h
+[v _get_time `(v ~T0 @X0 0 ef ]
+"31
+[v _display_clock `(v ~T0 @X0 0 ef ]
+"26 ./button_press_header.h
+[v _button_reset `(v ~T0 @X0 0 ef ]
+"24
+[v _OutputPins `(v ~T0 @X0 0 ef ]
+"37 ./clock_header.h
+[v _clock_setting `(v ~T0 @X0 0 ef ]
+"18 ./lcd_driver.h
+[; ;./lcd_driver.h: 18: void writecmd_4line(unsigned char x);
+[v _writecmd_4line `(v ~T0 @X0 0 ef1`uc ]
+"38 ./clock_header.h
+[v _date_setting `(v ~T0 @X0 0 ef ]
+"69 ./temp_header.h
+[; ;./temp_header.h: 69: void temp_setting(void);
+[v _temp_setting `(v ~T0 @X0 0 ef ]
+"2779 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2779: extern volatile __bit RE2 __attribute__((address(0x4A)));
+[v _RE2 `Vb ~T0 @X0 0 e@74 ]
+"16 ./lcd_driver.h
+[; ;./lcd_driver.h: 16: void write_str (unsigned char * array);
+[v _write_str `(v ~T0 @X0 0 ef1`*uc ]
+"75 ./temp_header.h
+[; ;./temp_header.h: 75: void temp_night(void);
+[v _temp_night `(v ~T0 @X0 0 ef ]
+"74
+[; ;./temp_header.h: 74: void temp_day(void);
+[v _temp_day `(v ~T0 @X0 0 ef ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"14 ./temp_header.h
+[p x FOSC = HS ]
+"15
+[p x WDTE = OFF ]
+"16
+[p x PWRTE = ON ]
+"17
+[p x BOREN = OFF ]
+"18
+[p x LVP = OFF ]
+"29
+[; ;./temp_header.h: 29:  unsigned char TLV=0 ;
+[v _TLV `uc ~T0 @X0 1 e ]
+[i _TLV
+-> -> 0 `i `uc
+]
+"30
+[; ;./temp_header.h: 30:  unsigned char THV=0;
+[v _THV `uc ~T0 @X0 1 e ]
+[i _THV
+-> -> 0 `i `uc
+]
+"31
+[; ;./temp_header.h: 31:  unsigned char TZ=0;
+[v _TZ `uc ~T0 @X0 1 e ]
+[i _TZ
+-> -> 0 `i `uc
+]
+"32
+[; ;./temp_header.h: 32:  unsigned char TX=0;
+[v _TX `uc ~T0 @X0 1 e ]
+[i _TX
+-> -> 0 `i `uc
+]
+"33
+[; ;./temp_header.h: 33:  unsigned int wd;
+[v _wd `ui ~T0 @X0 1 e ]
+"35
+[; ;./temp_header.h: 35: unsigned char shi;
+[v _shi `uc ~T0 @X0 1 e ]
+"36
+[; ;./temp_header.h: 36: unsigned char ge;
+[v _ge `uc ~T0 @X0 1 e ]
+"37
+[; ;./temp_header.h: 37: unsigned char shifen;
+[v _shifen `uc ~T0 @X0 1 e ]
+"39
+[; ;./temp_header.h: 39: unsigned char day_ten_max = 2;
+[v _day_ten_max `uc ~T0 @X0 1 e ]
+[i _day_ten_max
+-> -> 2 `i `uc
+]
+"40
+[; ;./temp_header.h: 40: unsigned char day_one_max = 5;
+[v _day_one_max `uc ~T0 @X0 1 e ]
+[i _day_one_max
+-> -> 5 `i `uc
+]
+"41
+[; ;./temp_header.h: 41: unsigned char day_dec_max = 5;
+[v _day_dec_max `uc ~T0 @X0 1 e ]
+[i _day_dec_max
+-> -> 5 `i `uc
+]
+"43
+[; ;./temp_header.h: 43: unsigned char day_ten_min = 2;
+[v _day_ten_min `uc ~T0 @X0 1 e ]
+[i _day_ten_min
+-> -> 2 `i `uc
+]
+"44
+[; ;./temp_header.h: 44: unsigned char day_one_min = 4;
+[v _day_one_min `uc ~T0 @X0 1 e ]
+[i _day_one_min
+-> -> 4 `i `uc
+]
+"45
+[; ;./temp_header.h: 45: unsigned char day_dec_min = 5;
+[v _day_dec_min `uc ~T0 @X0 1 e ]
+[i _day_dec_min
+-> -> 5 `i `uc
+]
+"47
+[; ;./temp_header.h: 47: unsigned char night_ten_max = 2;
+[v _night_ten_max `uc ~T0 @X0 1 e ]
+[i _night_ten_max
+-> -> 2 `i `uc
+]
+"48
+[; ;./temp_header.h: 48: unsigned char night_one_max = 1;
+[v _night_one_max `uc ~T0 @X0 1 e ]
+[i _night_one_max
+-> -> 1 `i `uc
+]
+"49
+[; ;./temp_header.h: 49: unsigned char night_dec_max = 0;
+[v _night_dec_max `uc ~T0 @X0 1 e ]
+[i _night_dec_max
+-> -> 0 `i `uc
+]
+"51
+[; ;./temp_header.h: 51: unsigned char night_ten_min = 2;
+[v _night_ten_min `uc ~T0 @X0 1 e ]
+[i _night_ten_min
+-> -> 2 `i `uc
+]
+"52
+[; ;./temp_header.h: 52: unsigned char night_one_min = 0;
+[v _night_one_min `uc ~T0 @X0 1 e ]
+[i _night_one_min
+-> -> 0 `i `uc
+]
+"53
+[; ;./temp_header.h: 53: unsigned char night_dec_min = 0;
+[v _night_dec_min `uc ~T0 @X0 1 e ]
+[i _night_dec_min
+-> -> 0 `i `uc
+]
+"55
+[; ;./temp_header.h: 55: unsigned char pass = 0;
+[v _pass `uc ~T0 @X0 1 e ]
+[i _pass
+-> -> 0 `i `uc
+]
+"56
+[; ;./temp_header.h: 56: unsigned int buzz_count = 0;
+[v _buzz_count `ui ~T0 @X0 1 e ]
+[i _buzz_count
+-> -> 0 `i `ui
+]
+"58
+[; ;./temp_header.h: 58: unsigned char temp_p;
+[v _temp_p `uc ~T0 @X0 1 e ]
+"59
+[; ;./temp_header.h: 59: unsigned char temp_d;
+[v _temp_d `uc ~T0 @X0 1 e ]
+"61
+[; ;./temp_header.h: 61: unsigned char temp_sec;
+[v _temp_sec `uc ~T0 @X0 1 e ]
+"12 ./button_press_header.h
+[p x FOSC = HS ]
+"13
+[p x WDTE = OFF ]
+"14
+[p x PWRTE = ON ]
+"15
+[p x BOREN = OFF ]
+"16
+[p x LVP = OFF ]
+"19
+[v _SecondRC `uc ~T0 @X0 1 e ]
+"20
+[v _FirstRC `uc ~T0 @X0 1 e ]
+"21
+[v _OutputRC `uc ~T0 @X0 1 e ]
+"12 ./clock_header.h
+[; ;./clock_header.h: 12: void get_time(void);
+[p x FOSC = HS ]
+"13
+[; ;./clock_header.h: 13: void display_clock(void);
+[p x WDTE = OFF ]
+"14
+[; ;./clock_header.h: 14: void start_time(void);
+[p x PWRTE = ON ]
+"15
+[; ;./clock_header.h: 15: void start_date(void);
+[p x BOREN = OFF ]
+"16
+[; ;./clock_header.h: 16: void time_write_1(unsigned char time_tx);
+[p x LVP = OFF ]
+"41
+[v _table `uc ~T0 @X0 -> 8 `i e ]
+[i _table
+:U ..
+-> -> 85 `i `uc
+-> -> 41 `i `uc
+-> -> 8 `i `uc
+-> -> 39 `i `uc
+-> -> 2 `i `uc
+-> -> 7 `i `uc
+-> -> 34 `i `uc
+-> -> 0 `i `uc
+..
+]
+"42
+[v _table1 `uc ~T0 @X0 -> 7 `i e ]
+"44
+[v _table2 `uc ~T0 @X0 -> 10 `i e ]
+[i _table2
+:U ..
+-> -> 48 `ui `uc
+-> -> 49 `ui `uc
+-> -> 50 `ui `uc
+-> -> 51 `ui `uc
+-> -> 52 `ui `uc
+-> -> 53 `ui `uc
+-> -> 54 `ui `uc
+-> -> 55 `ui `uc
+-> -> 56 `ui `uc
+-> -> 57 `ui `uc
+..
+]
+"45
+[v _wkd `uc ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"19 ClimateControl.c
+[; ;ClimateControl.c: 19: void main()
+[v _main `(v ~T0 @X0 1 ef ]
+"20
+[; ;ClimateControl.c: 20: {
+{
+[e :U _main ]
+[f ]
+"21
+[; ;ClimateControl.c: 21:     buzzer_init();
+[e ( _buzzer_init ..  ]
+"22
+[; ;ClimateControl.c: 22:     clock_init();
+[e ( _clock_init ..  ]
+"23
+[; ;ClimateControl.c: 23:     lcd_init();
+[e ( _lcd_init ..  ]
+"24
+[; ;ClimateControl.c: 24:     initialisation ();
+[e ( _initialisation ..  ]
+"28
+[; ;ClimateControl.c: 28:    while(1)
+[e :U 97 ]
+"29
+[; ;ClimateControl.c: 29:    {
+{
+"30
+[; ;ClimateControl.c: 30:        get_temp();
+[e ( _get_temp ..  ]
+"31
+[; ;ClimateControl.c: 31:        get_time();
+[e ( _get_time ..  ]
+"32
+[; ;ClimateControl.c: 32:        display_clock();
+[e ( _display_clock ..  ]
+"35
+[; ;ClimateControl.c: 35:        button_reset();
+[e ( _button_reset ..  ]
+"38
+[; ;ClimateControl.c: 38:        if (OutputPins(),FirstRC == 1 && SecondRC == 1){
+[e $ ! != ; ( _OutputPins ..  -> && == -> _FirstRC `i -> 1 `i == -> _SecondRC `i -> 1 `i `i -> 0 `i 99  ]
+{
+"39
+[; ;ClimateControl.c: 39:            button_reset();
+[e ( _button_reset ..  ]
+"40
+[; ;ClimateControl.c: 40:            clock_setting();
+[e ( _clock_setting ..  ]
+"41
+[; ;ClimateControl.c: 41:            writecmd_4line(0x1);
+[e ( _writecmd_4line (1 -> -> 1 `i `uc ]
+"42
+[; ;ClimateControl.c: 42:        }
+}
+[e $U 100  ]
+"44
+[; ;ClimateControl.c: 44:        else if (OutputPins(),FirstRC == 1 && SecondRC == 2){
+[e :U 99 ]
+[e $ ! != ; ( _OutputPins ..  -> && == -> _FirstRC `i -> 1 `i == -> _SecondRC `i -> 2 `i `i -> 0 `i 101  ]
+{
+"45
+[; ;ClimateControl.c: 45:            button_reset();
+[e ( _button_reset ..  ]
+"46
+[; ;ClimateControl.c: 46:            date_setting();
+[e ( _date_setting ..  ]
+"47
+[; ;ClimateControl.c: 47:            writecmd_4line(0x1);
+[e ( _writecmd_4line (1 -> -> 1 `i `uc ]
+"48
+[; ;ClimateControl.c: 48:        }
+}
+[e $U 102  ]
+"50
+[; ;ClimateControl.c: 50:        else if (OutputPins(),FirstRC == 1 && SecondRC == 3){
+[e :U 101 ]
+[e $ ! != ; ( _OutputPins ..  -> && == -> _FirstRC `i -> 1 `i == -> _SecondRC `i -> 3 `i `i -> 0 `i 103  ]
+{
+"51
+[; ;ClimateControl.c: 51:            button_reset();
+[e ( _button_reset ..  ]
+"52
+[; ;ClimateControl.c: 52:            temp_setting();
+[e ( _temp_setting ..  ]
+"53
+[; ;ClimateControl.c: 53:            writecmd_4line(0x1);
+[e ( _writecmd_4line (1 -> -> 1 `i `uc ]
+"54
+[; ;ClimateControl.c: 54:        }
+}
+[e $U 104  ]
+"56
+[; ;ClimateControl.c: 56:        else if (OutputPins(),FirstRC == 4 && SecondRC == 4){
+[e :U 103 ]
+[e $ ! != ; ( _OutputPins ..  -> && == -> _FirstRC `i -> 4 `i == -> _SecondRC `i -> 4 `i `i -> 0 `i 105  ]
+{
+"57
+[; ;ClimateControl.c: 57:            button_reset();
+[e ( _button_reset ..  ]
+"58
+[; ;ClimateControl.c: 58:            if (buzz_count >=20){
+[e $ ! >= _buzz_count -> -> 20 `i `ui 106  ]
+{
+"59
+[; ;ClimateControl.c: 59:                RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"60
+[; ;ClimateControl.c: 60:                pass = 1;
+[e = _pass -> -> 1 `i `uc ]
+"61
+[; ;ClimateControl.c: 61:                buzz_count = 0;
+[e = _buzz_count -> -> 0 `i `ui ]
+"62
+[; ;ClimateControl.c: 62:            }
+}
+[e :U 106 ]
+"63
+[; ;ClimateControl.c: 63:        }
+}
+[e :U 105 ]
+[e :U 104 ]
+[e :U 102 ]
+[e :U 100 ]
+"73
+[; ;ClimateControl.c: 73:        if (table1[1] > 0x29){
+[e $ ! > -> *U + &U _table1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _table1 `ui `ux `i -> 41 `i 107  ]
+{
+"75
+[; ;ClimateControl.c: 75:            if (table1[2] >= 0x19){
+[e $ ! >= -> *U + &U _table1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _table1 `ui `ux `i -> 25 `i 108  ]
+{
+"76
+[; ;ClimateControl.c: 76:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"77
+[; ;ClimateControl.c: 77:                 write_str("Night");
+[e ( _write_str (1 :s 1C ]
+"78
+[; ;ClimateControl.c: 78:                 temp_night();
+[e ( _temp_night ..  ]
+"79
+[; ;ClimateControl.c: 79:            }
+}
+[e $U 109  ]
+"81
+[; ;ClimateControl.c: 81:            else if (table1[2] < 0x06){
+[e :U 108 ]
+[e $ ! < -> *U + &U _table1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _table1 `ui `ux `i -> 6 `i 110  ]
+{
+"82
+[; ;ClimateControl.c: 82:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"83
+[; ;ClimateControl.c: 83:                 write_str("Night");
+[e ( _write_str (1 :s 2C ]
+"84
+[; ;ClimateControl.c: 84:                 temp_night();
+[e ( _temp_night ..  ]
+"85
+[; ;ClimateControl.c: 85:            }
+}
+[e $U 111  ]
+"87
+[; ;ClimateControl.c: 87:            else {
+[e :U 110 ]
+{
+"88
+[; ;ClimateControl.c: 88:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"89
+[; ;ClimateControl.c: 89:                 write_str("Day  ");
+[e ( _write_str (1 :s 3C ]
+"90
+[; ;ClimateControl.c: 90:                 temp_day();
+[e ( _temp_day ..  ]
+"91
+[; ;ClimateControl.c: 91:            }
+}
+[e :U 111 ]
+[e :U 109 ]
+"93
+[; ;ClimateControl.c: 93:        }
+}
+[e $U 112  ]
+"95
+[; ;ClimateControl.c: 95:        else if (table[1] < 0x30){
+[e :U 107 ]
+[e $ ! < -> *U + &U _table * -> -> -> 1 `i `ui `ux -> -> # *U &U _table `ui `ux `i -> 48 `i 113  ]
+{
+"97
+[; ;ClimateControl.c: 97:            if (table1[2] >= 0x20){
+[e $ ! >= -> *U + &U _table1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _table1 `ui `ux `i -> 32 `i 114  ]
+{
+"98
+[; ;ClimateControl.c: 98:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"99
+[; ;ClimateControl.c: 99:                 write_str("Night");
+[e ( _write_str (1 :s 4C ]
+"100
+[; ;ClimateControl.c: 100:                 temp_night();
+[e ( _temp_night ..  ]
+"101
+[; ;ClimateControl.c: 101:            }
+}
+[e $U 115  ]
+"103
+[; ;ClimateControl.c: 103:            else if ( table1[2] <= 0x06){
+[e :U 114 ]
+[e $ ! <= -> *U + &U _table1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _table1 `ui `ux `i -> 6 `i 116  ]
+{
+"104
+[; ;ClimateControl.c: 104:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"105
+[; ;ClimateControl.c: 105:                 write_str("Night");
+[e ( _write_str (1 :s 5C ]
+"106
+[; ;ClimateControl.c: 106:                 temp_night();
+[e ( _temp_night ..  ]
+"107
+[; ;ClimateControl.c: 107:            }
+}
+[e $U 117  ]
+"109
+[; ;ClimateControl.c: 109:            else {
+[e :U 116 ]
+{
+"110
+[; ;ClimateControl.c: 110:                 writecmd_4line(0x95);
+[e ( _writecmd_4line (1 -> -> 149 `i `uc ]
+"111
+[; ;ClimateControl.c: 111:                 write_str("Day  ");
+[e ( _write_str (1 :s 6C ]
+"112
+[; ;ClimateControl.c: 112:                 temp_day();
+[e ( _temp_day ..  ]
+"113
+[; ;ClimateControl.c: 113:            }
+}
+[e :U 117 ]
+[e :U 115 ]
+"114
+[; ;ClimateControl.c: 114:        }
+}
+[e :U 113 ]
+[e :U 112 ]
+"115
+[; ;ClimateControl.c: 115:     }
+}
+[e :U 96 ]
+[e $U 97  ]
+[e :U 98 ]
+"116
+[; ;ClimateControl.c: 116: }
+[e :UE 95 ]
+}
+[a 1C 78 105 103 104 116 0 ]
+[a 2C 78 105 103 104 116 0 ]
+[a 4C 78 105 103 104 116 0 ]
+[a 5C 78 105 103 104 116 0 ]
+[a 3C 68 97 121 32 32 0 ]
+[a 6C 68 97 121 32 32 0 ]

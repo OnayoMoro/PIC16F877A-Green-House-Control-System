@@ -1,0 +1,26 @@
+ if (day_ten != 3){
+                if (day_dec == 0){
+                    day_dec = 5;
+                    print('d');
+                }
+                else if (day_dec == 5){
+                    day_dec = 0;
+                    if (day_ten == 2 && day_one == 9 && day_dec == 5){
+                    day_ten = 3;
+                    day_one = 0;
+                    day_dec = 0;
+                    print('d');
+                    }
+                    else {
+                        if (day_ten == 1 &&day_one == 9 && day_dec == 5){
+                            day_ten = 2;
+                            day_one = 0;
+                            day_dec = 0;
+                            print('d');
+                        }
+                        else {
+                            day_one++;
+                            print('d');
+                        }
+                    }
+                }
