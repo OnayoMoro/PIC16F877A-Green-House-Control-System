@@ -61,7 +61,7 @@ void lcd_init()
     //LCD init
     writecmd_4line(0x0e);              //display on,cursor on,blink on.
     writecmd_4line(0x1);               //clr screen 
-    writecmd_4line(0x38);              //8 bits 2 lines 5*7 mode.  
+    writecmd_4line(0x38);              //8 bits 4 lines 5*7 mode.  
 }
 
 //---------------------------------------

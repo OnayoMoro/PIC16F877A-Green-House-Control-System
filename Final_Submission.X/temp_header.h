@@ -21,7 +21,7 @@
 //THE configure of MCU,watchdog OFF,electrify delay OPEN,power down check OFF,
 //LOW power programme OFF,encrypt,4M crystal HS surge.
  
-#define  uch unsigned char                   //                                          
+# define  uch unsigned char                   //                                          
 # define DQ RE0                              //define 18B20 data PORT                    
 # define DQ_DIR TRISE0                       //define 18B20 E PORT direct register       
 # define DQ_HIGH() DQ_DIR =1                 //set data PORT INPUT                       

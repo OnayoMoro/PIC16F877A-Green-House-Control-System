@@ -2358,6 +2358,7 @@ void OK(){
     write_str("OK  ");
     buzz_count = 0;
     pass = 0;
+    RE2 = 0;
 }
 
 void temp_check_lower(){
@@ -2369,6 +2370,7 @@ void temp_check_lower(){
         unsigned char temp_e = shi*100 + ge*10 + shifen;
         if (temp_p > temp_e){
                 buzz_count = 0;
+                RE2 = 0;
         }
         else if (temp_p == temp_e){
            buzz_count++;
@@ -2387,6 +2389,7 @@ void temp_check_rise(){
         unsigned char temp_e = shi*100 + ge*10 + shifen;
         if (temp_p < temp_e){
             buzz_count = 0;
+            RE2 = 0;
         }
         else if (temp_p == temp_e){
             buzz_count++;

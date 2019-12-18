@@ -1947,147 +1947,156 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;temperature.c: 541:     pass = 0;
 [e = _pass -> -> 0 `i `uc ]
 "542
-[; ;temperature.c: 542: }
+[; ;temperature.c: 542:     RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"543
+[; ;temperature.c: 543: }
 [e :UE 206 ]
 }
-"544
-[; ;temperature.c: 544: void temp_check_lower(){
+"545
+[; ;temperature.c: 545: void temp_check_lower(){
 [v _temp_check_lower `(v ~T0 @X0 1 ef ]
 {
 [e :U _temp_check_lower ]
 [f ]
-"546
-[; ;temperature.c: 546:     if (temp_sec%2 == 0){
+"547
+[; ;temperature.c: 547:     if (temp_sec%2 == 0){
 [e $ ! == % -> _temp_sec `i -> 2 `i -> 0 `i 208  ]
 {
-"547
-[; ;temperature.c: 547:         temp_p = shi*100 + ge*10 + shifen;
-[e = _temp_p -> + + * -> _shi `i -> 100 `i * -> _ge `i -> 10 `i -> _shifen `i `uc ]
 "548
-[; ;temperature.c: 548:     }
+[; ;temperature.c: 548:         temp_p = shi*100 + ge*10 + shifen;
+[e = _temp_p -> + + * -> _shi `i -> 100 `i * -> _ge `i -> 10 `i -> _shifen `i `uc ]
+"549
+[; ;temperature.c: 549:     }
 }
 [e $U 209  ]
-"549
-[; ;temperature.c: 549:     else if (temp_sec%2 != 0){
+"550
+[; ;temperature.c: 550:     else if (temp_sec%2 != 0){
 [e :U 208 ]
 [e $ ! != % -> _temp_sec `i -> 2 `i -> 0 `i 210  ]
 {
-"550
-[; ;temperature.c: 550:         unsigned char temp_e = shi*100 + ge*10 + shifen;
+"551
+[; ;temperature.c: 551:         unsigned char temp_e = shi*100 + ge*10 + shifen;
 [v _temp_e `uc ~T0 @X0 1 a ]
 [e = _temp_e -> + + * -> _shi `i -> 100 `i * -> _ge `i -> 10 `i -> _shifen `i `uc ]
-"551
-[; ;temperature.c: 551:         if (temp_p > temp_e){
+"552
+[; ;temperature.c: 552:         if (temp_p > temp_e){
 [e $ ! > -> _temp_p `i -> _temp_e `i 211  ]
 {
-"552
-[; ;temperature.c: 552:                 buzz_count = 0;
-[e = _buzz_count -> -> 0 `i `ui ]
 "553
-[; ;temperature.c: 553:         }
+[; ;temperature.c: 553:                 buzz_count = 0;
+[e = _buzz_count -> -> 0 `i `ui ]
+"554
+[; ;temperature.c: 554:                 RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"555
+[; ;temperature.c: 555:         }
 }
 [e $U 212  ]
-"554
-[; ;temperature.c: 554:         else if (temp_p == temp_e){
+"556
+[; ;temperature.c: 556:         else if (temp_p == temp_e){
 [e :U 211 ]
 [e $ ! == -> _temp_p `i -> _temp_e `i 213  ]
 {
-"555
-[; ;temperature.c: 555:            buzz_count++;
+"557
+[; ;temperature.c: 557:            buzz_count++;
 [e ++ _buzz_count -> -> 1 `i `ui ]
-"556
-[; ;temperature.c: 556:         }
+"558
+[; ;temperature.c: 558:         }
 }
 [e $U 214  ]
-"557
-[; ;temperature.c: 557:         else {
+"559
+[; ;temperature.c: 559:         else {
 [e :U 213 ]
 {
-"558
-[; ;temperature.c: 558:             buzz_count++;
+"560
+[; ;temperature.c: 560:             buzz_count++;
 [e ++ _buzz_count -> -> 1 `i `ui ]
-"559
-[; ;temperature.c: 559:         }
+"561
+[; ;temperature.c: 561:         }
 }
 [e :U 214 ]
 [e :U 212 ]
-"560
-[; ;temperature.c: 560:     }
+"562
+[; ;temperature.c: 562:     }
 }
 [e :U 210 ]
 [e :U 209 ]
-"561
-[; ;temperature.c: 561: }
+"563
+[; ;temperature.c: 563: }
 [e :UE 207 ]
 }
-"563
-[; ;temperature.c: 563: void temp_check_rise(){
+"565
+[; ;temperature.c: 565: void temp_check_rise(){
 [v _temp_check_rise `(v ~T0 @X0 1 ef ]
 {
 [e :U _temp_check_rise ]
 [f ]
-"564
-[; ;temperature.c: 564:     if (temp_sec%2 == 0){
+"566
+[; ;temperature.c: 566:     if (temp_sec%2 == 0){
 [e $ ! == % -> _temp_sec `i -> 2 `i -> 0 `i 216  ]
 {
-"565
-[; ;temperature.c: 565:         temp_p = shi*100 + ge*10 + shifen;
+"567
+[; ;temperature.c: 567:         temp_p = shi*100 + ge*10 + shifen;
 [e = _temp_p -> + + * -> _shi `i -> 100 `i * -> _ge `i -> 10 `i -> _shifen `i `uc ]
-"566
-[; ;temperature.c: 566:     }
+"568
+[; ;temperature.c: 568:     }
 }
 [e $U 217  ]
-"567
-[; ;temperature.c: 567:     else if (temp_sec%2 != 0){
+"569
+[; ;temperature.c: 569:     else if (temp_sec%2 != 0){
 [e :U 216 ]
 [e $ ! != % -> _temp_sec `i -> 2 `i -> 0 `i 218  ]
 {
-"568
-[; ;temperature.c: 568:         unsigned char temp_e = shi*100 + ge*10 + shifen;
+"570
+[; ;temperature.c: 570:         unsigned char temp_e = shi*100 + ge*10 + shifen;
 [v _temp_e `uc ~T0 @X0 1 a ]
 [e = _temp_e -> + + * -> _shi `i -> 100 `i * -> _ge `i -> 10 `i -> _shifen `i `uc ]
-"569
-[; ;temperature.c: 569:         if (temp_p < temp_e){
+"571
+[; ;temperature.c: 571:         if (temp_p < temp_e){
 [e $ ! < -> _temp_p `i -> _temp_e `i 219  ]
 {
-"570
-[; ;temperature.c: 570:             buzz_count = 0;
+"572
+[; ;temperature.c: 572:             buzz_count = 0;
 [e = _buzz_count -> -> 0 `i `ui ]
-"571
-[; ;temperature.c: 571:         }
+"573
+[; ;temperature.c: 573:             RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"574
+[; ;temperature.c: 574:         }
 }
 [e $U 220  ]
-"572
-[; ;temperature.c: 572:         else if (temp_p == temp_e){
+"575
+[; ;temperature.c: 575:         else if (temp_p == temp_e){
 [e :U 219 ]
 [e $ ! == -> _temp_p `i -> _temp_e `i 221  ]
 {
-"573
-[; ;temperature.c: 573:             buzz_count++;
-[e ++ _buzz_count -> -> 1 `i `ui ]
-"575
-[; ;temperature.c: 575:         }
-}
-[e $U 222  ]
 "576
-[; ;temperature.c: 576:         else {
-[e :U 221 ]
-{
-"577
-[; ;temperature.c: 577:             buzz_count++;
+[; ;temperature.c: 576:             buzz_count++;
 [e ++ _buzz_count -> -> 1 `i `ui ]
 "578
 [; ;temperature.c: 578:         }
 }
+[e $U 222  ]
+"579
+[; ;temperature.c: 579:         else {
+[e :U 221 ]
+{
+"580
+[; ;temperature.c: 580:             buzz_count++;
+[e ++ _buzz_count -> -> 1 `i `ui ]
+"581
+[; ;temperature.c: 581:         }
+}
 [e :U 222 ]
 [e :U 220 ]
-"579
-[; ;temperature.c: 579:     }
+"582
+[; ;temperature.c: 582:     }
 }
 [e :U 218 ]
 [e :U 217 ]
-"580
-[; ;temperature.c: 580: }
+"583
+[; ;temperature.c: 583: }
 [e :UE 215 ]
 }
 [a 5C 68 97 121 0 ]

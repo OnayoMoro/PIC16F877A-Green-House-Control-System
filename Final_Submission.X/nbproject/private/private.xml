@@ -17,9 +17,15 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/functions_header.h</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/buzzer_header.h</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/lcd_driver.h</file>
             <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/temperature.c</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/clock_header.h</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/ClimateControl.c</file>
             <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/temp_header.h</file>
-            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/clock_source.c</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/functions_source.c</file>
+            <file>file:/C:/Users/onayo/OneDrive/PIC%20assembly/Final_Submission.X/buzzer.c</file>
         </group>
     </open-files>
 </project-private>
