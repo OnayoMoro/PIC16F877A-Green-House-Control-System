@@ -1,0 +1,7 @@
+Warning[205] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 2 : Found directive in column 1. (__CONFIG)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 5 : Found label after column 1. (outer_delay)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 6 : Found label after column 1. (inner_delay)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 9 : Found label after column 1. (main)
+Message[302] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 15 : Found label after column 1. (loop)
+Message[305] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\LAB1 LOOPS.X\ISSA LOOP.ASM 16 : Using default destination of 1 (file).

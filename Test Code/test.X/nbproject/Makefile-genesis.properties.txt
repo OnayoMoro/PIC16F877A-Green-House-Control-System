@@ -1,0 +1,9 @@
+#
+#Mon Oct 21 17:59:50 BST 2019
+default.languagetoolchain.dir=C\:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\bin
+configurations-xml=e646f70ac862bbf9f4dd102ee48f407a
+com-microchip-mplab-nbide-embedded-makeproject-MakeProject.md5=37eccb08230908d044ad3fe14e24ea9a
+default.languagetoolchain.version=2.10
+host.platform=windows
+conf.ids=default
+default.com-microchip-mplab-nbide-toolchainXC8-XC8LanguageToolchain.md5=5fdf03d5ed941dd849268ab6ecd38ef0

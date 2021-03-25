@@ -1,0 +1,14 @@
+Warning[205] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 2 : Found directive in column 1. (__CONFIG)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 5 : Found label after column 1. (outer_delay)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 6 : Found label after column 1. (inner_delay)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 7 : Found label after column 1. (bit_1)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 8 : Found label after column 1. (count)
+Warning[205] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 10 : Found directive in column 1. (org)
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 11 : Found label after column 1. (main)
+Message[302] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 28 : Found label after column 1. (loop)
+Message[305] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 29 : Using default destination of 1 (file).
+Warning[207] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 33 : Found label after column 1. (pb)
+Message[305] C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 34 : Using default destination of 1 (file).
+Error[128]   C:\USERS\ONAYO MORO\DOCUMENTS\PIC ASSEMBLY\STEVE.X\ERWIN.ASM 38 : Missing argument(s)

@@ -1,0 +1,252 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"16 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\4linelcddriver.c
+[v _dispcmd dispcmd `(v  1 e 1 0 ]
+"41
+[v _yeet yeet `(v  1 e 1 0 ]
+"51
+[v _delay delay `(v  1 e 1 0 ]
+"59
+[v _writechar writechar `(v  1 e 1 0 ]
+"71
+[v _writecmd writecmd `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"58 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\Tempmain.c
+[v _display display `(v  1 e 1 0 ]
+"66
+[v _init_temp init_temp `(v  1 e 1 0 ]
+"75
+[v _reset reset `(i  1 e 2 0 ]
+"92
+[v _write_byte write_byte `(v  1 e 1 0 ]
+"116
+[v _read_byte read_byte `(uc  1 e 1 0 ]
+"146
+[v _get_temp get_temp `(v  1 e 1 0 ]
+"183
+[v _main main `(v  1 e 1 0 ]
+"65 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\tempsource.c
+[v _delay_temp delay_temp `(v  1 e 1 0 ]
+"340 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f877a.h
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2656
+[v _RA0 RA0 `VEb  1 e 0 @40 ]
+"2662
+[v _RA2 RA2 `VEb  1 e 0 @42 ]
+"2665
+[v _RA3 RA3 `VEb  1 e 0 @43 ]
+"2668
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"2671
+[v _RA5 RA5 `VEb  1 e 0 @45 ]
+"2917
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"21 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\tempsource.c
+[v _TLV TLV `uc  1 e 1 0 ]
+"22
+[v _THV THV `uc  1 e 1 0 ]
+"23
+[v _TZ TZ `uc  1 e 1 0 ]
+"24
+[v _TX TX `uc  1 e 1 0 ]
+"25
+[v _wd wd `ui  1 e 2 0 ]
+"27
+[v _shi shi `uc  1 e 1 0 ]
+"28
+[v _ge ge `uc  1 e 1 0 ]
+"29
+[v _shifen shifen `uc  1 e 1 0 ]
+"30
+[v _baifen baifen `uc  1 e 1 0 ]
+"31
+[v _qianfen qianfen `uc  1 e 1 0 ]
+"32
+[v _wanfen wanfen `uc  1 e 1 0 ]
+"34
+[v _num num `[10]uc  1 e 10 0 ]
+"183 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\Tempmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"191
+} 0
+"66
+[v _init_temp init_temp `(v  1 e 1 0 ]
+{
+"71
+} 0
+"146
+[v _get_temp get_temp `(v  1 e 1 0 ]
+{
+"148
+[v get_temp@i i `i  1 a 2 28 ]
+"179
+} 0
+"92
+[v _write_byte write_byte `(v  1 e 1 0 ]
+{
+[v write_byte@val val `uc  1 a 1 wreg ]
+"94
+[v write_byte@i i `uc  1 a 1 8 ]
+"95
+[v write_byte@temp temp `uc  1 a 1 6 ]
+"92
+[v write_byte@val val `uc  1 a 1 wreg ]
+"96
+[v write_byte@val val `uc  1 a 1 7 ]
+"112
+} 0
+"75
+[v _reset reset `(i  1 e 2 0 ]
+{
+"77
+[v reset@presence presence `uc  1 a 1 5 ]
+"88
+} 0
+"116
+[v _read_byte read_byte `(uc  1 e 1 0 ]
+{
+"118
+[v read_byte@i i `uc  1 a 1 6 ]
+"119
+[v read_byte@value value `uc  1 a 1 5 ]
+"142
+} 0
+"65 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\tempsource.c
+[v _delay_temp delay_temp `(v  1 e 1 0 ]
+{
+[v delay_temp@x x `uc  1 a 1 wreg ]
+"67
+[v delay_temp@z z `uc  1 a 1 3 ]
+"65
+[v delay_temp@x x `uc  1 a 1 wreg ]
+[v delay_temp@y y `uc  1 p 1 0 ]
+[v delay_temp@x x `uc  1 a 1 2 ]
+"72
+} 0
+"58 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\Tempmain.c
+[v _display display `(v  1 e 1 0 ]
+{
+"60
+[v display@tempstr tempstr `[1]uc  1 a 1 12 ]
+"62
+} 0
+"16 C:\Users\Onayo Moro\Documents\PIC assembly\Tempdrivers.X\4linelcddriver.c
+[v _dispcmd dispcmd `(v  1 e 1 0 ]
+{
+"35
+[v dispcmd@error error `[20]uc  1 a 20 4 ]
+"16
+[v dispcmd@line line `i  1 p 2 8 ]
+[v dispcmd@linetxt linetxt `*.1uc  1 p 1 10 ]
+"33
+[v dispcmd@F865 F865 `[20]uc  1 s 20 F865 ]
+"38
+} 0
+"41
+[v _yeet yeet `(v  1 e 1 0 ]
+{
+[v yeet@array array `*.4uc  1 a 1 wreg ]
+"42
+[v yeet@i i `i  1 a 2 4 ]
+[v yeet@p p `*.4uc  1 a 1 6 ]
+"41
+[v yeet@array array `*.4uc  1 a 1 wreg ]
+[v yeet@array array `*.4uc  1 a 1 7 ]
+"47
+} 0
+"59
+[v _writechar writechar `(v  1 e 1 0 ]
+{
+[v writechar@x x `uc  1 a 1 wreg ]
+[v writechar@x x `uc  1 a 1 wreg ]
+"61
+[v writechar@x x `uc  1 a 1 2 ]
+"67
+} 0
+"71
+[v _writecmd writecmd `(v  1 e 1 0 ]
+{
+[v writecmd@x x `uc  1 a 1 wreg ]
+[v writecmd@x x `uc  1 a 1 wreg ]
+"73
+[v writecmd@x x `uc  1 a 1 2 ]
+"79
+} 0
+"51
+[v _delay delay `(v  1 e 1 0 ]
+{
+"53
+[v delay@i i `i  1 a 2 0 ]
+"55
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 6 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 8 ]
+"30
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 6 ]
+[v ___awmod@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0

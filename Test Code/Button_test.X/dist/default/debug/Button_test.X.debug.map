@@ -1,0 +1,622 @@
+Microchip MPLAB XC8 Compiler V2.10 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
+  -cs -h+dist/default/debug\Button_test.X.debug.sym \
+  --cmf=dist/default/debug\Button_test.X.debug.cmf -z -Q16F877A \
+  -oC:\Users\onayo\AppData\Local\Temp\se7k.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/debug/Button_test.X.debug.map -E1 -ver=XC8 --acfsm=1493 \
+  -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k C:\Users\onayo\AppData\Local\Temp\se7k.o \
+  dist/default/debug\Button_test.X.debug.o 
+
+Object code version is 3.11
+
+Machine type is 16F877A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\onayo\AppData\Local\Temp\se7k.o
+                end_init                              0        0        3        0       0
+                config                             2007     2007        1     400E       0
+dist/default/debug\Button_test.X.debug.o
+                cinit                               7F3      7F3        D      FE6       0
+                text8                               61B      61B       13      C36       0
+                text7                               71D      71D       D6      E3A       0
+                text6                               660      660       2B      CC0       0
+                text5                               62E      62E       15      C5C       0
+                text4                               6E8      6E8       35      DD0       0
+                text3                               68B      68B       2E      D16       0
+                text2                               60B      60B       10      C16       0
+                text1                               6B9      6B9       2F      D72       0
+                maintext                            643      643       1D      C86       0
+                cstackCOMMON                         70       70        8       70       1
+                bssBANK0                             20       20        7       20       1
+                strings                               3        3       18        6       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              0        0        3         0
+                cinit                               7F3      7F3        D         0
+                text8                               61B      61B       13         0
+                text7                               71D      71D       D6         0
+                text6                               660      660       2B         0
+                text5                               62E      62E       15         0
+                text4                               6E8      6E8       35         0
+                text3                               68B      68B       2E         0
+                text2                               60B      60B       10         0
+                text1                               6B9      6B9       2F         0
+                maintext                            643      643       1D         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+                strings                               3        3       18         0
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        8         1
+
+        CLASS   BANK0          
+                bssBANK0                             20       20        7         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        1         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                strings                        000003  000018  00001B         6       0  STRING      2
+                bssBANK0                       000020  000007  000027        20       1  BANK0       1
+                cstackCOMMON                   000070  000008  000078        70       1  COMMON      1
+                text2                          00060B  000010  00061B       C16       0  CODE        2
+                text8                          00061B  000013  00062E       C36       0  CODE        2
+                text5                          00062E  000015  000643       C5C       0  CODE        2
+                maintext                       000643  00001D  000660       C86       0  CODE        2
+                text6                          000660  00002B  00068B       CC0       0  CODE        2
+                text3                          00068B  00002E  0006B9       D16       0  CODE        2
+                text1                          0006B9  00002F  0006E8       D72       0  CODE        2
+                text4                          0006E8  000035  00071D       DD0       0  CODE        2
+                text7                          00071D  0000D6  0007F3       E3A       0  CODE        2
+                cinit                          0007F3  00000D  000800       FE6       0  CODE        2
+                config                         002007  000001  002008      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            0027-006F             49           1
+        BANK1            00A0-00EF             50           1
+        BANK2            0110-016F             60           1
+        BANK3            0190-01EF             60           1
+        CODE             001B-060A            5F0           2
+                         0800-1FFF            800
+        COMMON           0078-007D              6           1
+        CONST            001B-060A            100           2
+                         0800-1FFF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            001B-060A            100           2
+                         0800-1FFF            100
+        IDLOC            2000-2003              4           2
+        RAM              0027-006F             49           1
+                         00A0-00EF             50
+                         0110-016F             60
+                         0190-01EF             60
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STACK            0110-016F             60           1
+        STRCODE          001B-060A            5F0           2
+                         0800-1FFF           1800
+        STRING           001B-060A            100           2
+                         0800-1FFF            100
+
+                                  Symbol Table
+
+_ADCON1                  (abs)        009F
+_OPTION_REG              (abs)        0081
+_PORTA                   (abs)        0005
+_PORTD                   (abs)        0008
+_RB0                     (abs)        0030
+_RB1                     (abs)        0031
+_RB4                     (abs)        0034
+_RB5                     (abs)        0035
+_TRISA                   (abs)        0085
+_TRISB                   (abs)        0086
+_TRISB4                  (abs)        0434
+_TRISD                   (abs)        0088
+__CFG_BOREN$OFF          (abs)        0000
+__CFG_FOSC$HS            (abs)        0000
+__CFG_LVP$OFF            (abs)        0000
+__CFG_PWRTE$ON           (abs)        0000
+__CFG_WDTE$OFF           (abs)        0000
+__Habs1                  abs1         0000
+__Hbank0                 bank0        0000
+__Hbank1                 bank1        0000
+__Hbank2                 bank2        0000
+__Hbank3                 bank3        0000
+__HbssBANK0              bssBANK0     0000
+__Hcinit                 cinit        0800
+__Hclrtext               clrtext      0000
+__Hcode                  code         0000
+__Hcommon                common       0000
+__Hconfig                config       2008
+__HcstackCOMMON          cstackCOMMON 0000
+__Heeprom_data           eeprom_data  0000
+__Hend_init              end_init     0003
+__Hfunctab               functab      0000
+__Hidloc                 idloc        0000
+__Hinit                  init         0000
+__Hintentry              intentry     0000
+__Hmaintext              maintext     0000
+__Hpowerup               powerup      0000
+__Hram                   ram          0000
+__Hreset_vec             reset_vec    0000
+__Hsfr0                  sfr0         0000
+__Hsfr1                  sfr1         0000
+__Hsfr2                  sfr2         0000
+__Hsfr3                  sfr3         0000
+__Hspace_0               (abs)        2008
+__Hspace_1               (abs)        0078
+__Hspace_2               (abs)        0000
+__Hspace_3               (abs)        0000
+__Hstack                 stack        0000
+__Hstrings               strings      0000
+__Htext                  text         0000
+__Labs1                  abs1         0000
+__Lbank0                 bank0        0000
+__Lbank1                 bank1        0000
+__Lbank2                 bank2        0000
+__Lbank3                 bank3        0000
+__LbssBANK0              bssBANK0     0000
+__Lcinit                 cinit        07F3
+__Lclrtext               clrtext      0000
+__Lcode                  code         0000
+__Lcommon                common       0000
+__Lconfig                config       2007
+__LcstackCOMMON          cstackCOMMON 0000
+__Leeprom_data           eeprom_data  0000
+__Lend_init              end_init     0000
+__Lfunctab               functab      0000
+__Lidloc                 idloc        0000
+__Linit                  init         0000
+__Lintentry              intentry     0000
+__Lmaintext              maintext     0000
+__Lpowerup               powerup      0000
+__Lram                   ram          0000
+__Lreset_vec             reset_vec    0000
+__Lsfr0                  sfr0         0000
+__Lsfr1                  sfr1         0000
+__Lsfr2                  sfr2         0000
+__Lsfr3                  sfr3         0000
+__Lspace_0               (abs)        0000
+__Lspace_1               (abs)        0000
+__Lspace_2               (abs)        0000
+__Lspace_3               (abs)        0000
+__Lstack                 stack        0000
+__Lstrings               strings      0000
+__Ltext                  text         0000
+__S0                     (abs)        2008
+__S1                     (abs)        0078
+__S2                     (abs)        0000
+__S3                     (abs)        0000
+___int_sp                stack        0000
+___latbits               (abs)        0002
+___sp                    stack        0000
+___stackhi               (abs)        0000
+___stacklo               (abs)        0000
+__end_of__initialization cinit        07FC
+__end_of__stringtab      strings      0009
+__end_of_delay           text8        062E
+__end_of_display         text7        07F3
+__end_of_ds1302_init     text5        0643
+__end_of_get_time        text3        06B9
+__end_of_main            maintext     0660
+__end_of_port_init       text2        061B
+__end_of_set_time        text1        06E8
+__end_of_table           strings      001B
+__end_of_table2          strings      0013
+__end_of_time_read_1     text4        071D
+__end_of_time_write_1    text6        068B
+__initialization         cinit        07F3
+__pbssBANK0              bssBANK0     0020
+__pcstackCOMMON          cstackCOMMON 0070
+__pmaintext              maintext     0643
+__pstrings               strings      0003
+__ptext1                 text1        06B9
+__ptext2                 text2        060B
+__ptext3                 text3        068B
+__ptext4                 text4        06E8
+__ptext5                 text5        062E
+__ptext6                 text6        0660
+__ptext7                 text7        071D
+__ptext8                 text8        061B
+__size_of_delay          (abs)        0000
+__size_of_display        (abs)        0000
+__size_of_ds1302_init    (abs)        0000
+__size_of_get_time       (abs)        0000
+__size_of_main           (abs)        0000
+__size_of_port_init      (abs)        0000
+__size_of_set_time       (abs)        0000
+__size_of_time_read_1    (abs)        0000
+__size_of_time_write_1   (abs)        0000
+__stringbase             strings      0008
+__stringtab              strings      0003
+_delay                   text8        061B
+_display                 text7        071D
+_ds1302_init             text5        062E
+_get_time                text3        068B
+_main                    maintext     0643
+_port_init               text2        060B
+_set_time                text1        06B9
+_table                   strings      0013
+_table1                  bssBANK0     0020
+_table2                  strings      0009
+_time_read_1             text4        06E8
+_time_write_1            text6        0660
+btemp                    (abs)        007E
+delay@i                  cstackCOMMON 0070
+display@i                cstackCOMMON 0074
+end_of_initialization    cinit        07FC
+get_time@i               cstackCOMMON 0076
+intlevel0                functab      0000
+intlevel1                functab      0000
+intlevel2                functab      0000
+intlevel3                functab      0000
+intlevel4                functab      0000
+intlevel5                functab      0000
+reset_vec                reset_vec    0000
+set_time@i               cstackCOMMON 0075
+start                    init         0000
+start_initialization     cinit        07F3
+time_read_1@j            cstackCOMMON 0072
+time_read_1@time_rx      cstackCOMMON 0074
+time_write_1@j           cstackCOMMON 0072
+time_write_1@time_tx     cstackCOMMON 0074
+wtemp0                   (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 45 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels required when called:    2
+ This function calls:
+		_display
+		_ds1302_init
+		_get_time
+		_port_init
+		_set_time
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _set_time *****************
+ Defined at:
+		line 71 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               2    5[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_time_write_1
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _port_init *****************
+ Defined at:
+		line 138 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _get_time *****************
+ Defined at:
+		line 85 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               2    6[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          1       0       0       0       0
+      Totals:         3       0       0       0       0
+Total ram usage:        3 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_time_read_1
+		_time_write_1
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _time_read_1 *****************
+ Defined at:
+		line 118 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  j               2    2[COMMON] int 
+  time_rx         1    4[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, btemp+1
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_get_time
+ This function uses a non-reentrant model
+
+
+ *************** function _ds1302_init *****************
+ Defined at:
+		line 59 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, btemp+1, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_time_write_1
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _time_write_1 *****************
+ Defined at:
+		line 99 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+  time_tx         1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  time_tx         1    4[COMMON] unsigned char 
+  j               2    2[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, btemp+1
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         3       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_ds1302_init
+		_set_time
+		_get_time
+ This function uses a non-reentrant model
+
+
+ *************** function _display *****************
+ Defined at:
+		line 151 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               2    4[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          2       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_delay
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _delay *****************
+ Defined at:
+		line 193 in file "clock_test.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               2    0[COMMON] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         2       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         2       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_display
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+clock_test.c
+		_time_read_1   		CODE           	06E8	0000	54
+		_delay         		CODE           	061B	0000	20
+		_display       		CODE           	071D	0000	215
+		_main          		CODE           	0643	0000	30
+		_get_time      		CODE           	068B	0000	47
+		_port_init     		CODE           	060B	0000	17
+		_set_time      		CODE           	06B9	0000	48
+		_time_write_1  		CODE           	0660	0000	44
+		_ds1302_init   		CODE           	062E	0000	22
+
+clock_test.c estimated size: 497
+
+shared
+		__stringtab    		STRING         	0003	0000	7
+		_table         		STRING         	0013	0000	9
+		_table2        		STRING         	0009	0000	11
+		__initialization		CODE           	07F3	0000	10
+
+shared estimated size: 37
+

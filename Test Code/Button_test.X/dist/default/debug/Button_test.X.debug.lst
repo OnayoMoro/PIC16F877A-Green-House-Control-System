@@ -1,0 +1,1585 @@
+
+
+Microchip MPLAB XC8 Assembler V2.10 build 88905656 
+                                                                                               Mon Nov 25 18:18:53 2019
+
+Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
+     1                           	processor	16F877A
+     2                           	opt	pw 120
+     3                           	opt	flic
+     4                           	psect	strings,global,class=STRING,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+     7                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2
+    10                           	psect	text2,local,class=CODE,merge=1,delta=2
+    11                           	psect	text3,local,class=CODE,merge=1,delta=2
+    12                           	psect	text4,local,class=CODE,merge=1,delta=2
+    13                           	psect	text5,local,class=CODE,merge=1,delta=2
+    14                           	psect	text6,local,class=CODE,merge=1,delta=2
+    15                           	psect	text7,local,class=CODE,merge=1,delta=2
+    16                           	psect	text8,local,class=CODE,merge=1,delta=2
+    17                           	dabs	1,0x7E,2
+    18  0000                     
+    19                           ; Version 2.10
+    20                           ; Generated 31/07/2019 GMT
+    21                           ; 
+    22                           ; Copyright © 2019, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    23                           ; All rights reserved.
+    24                           ; 
+    25                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    26                           ; 
+    27                           ; Redistribution and use in source and binary forms, with or without modification, are
+    28                           ; permitted provided that the following conditions are met:
+    29                           ; 
+    30                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    31                           ;        conditions and the following disclaimer.
+    32                           ; 
+    33                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    34                           ;        of conditions and the following disclaimer in the documentation and/or other
+    35                           ;        materials provided with the distribution.
+    36                           ; 
+    37                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    38                           ;        software without specific prior written permission.
+    39                           ; 
+    40                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    41                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    42                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    43                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    44                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    45                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    46                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    47                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    48                           ; 
+    49                           ; 
+    50                           ; Code-generator required, PIC16F877A Definitions
+    51                           ; 
+    52                           ; SFR Addresses
+    53  0000                     	;# 
+    54  0001                     	;# 
+    55  0002                     	;# 
+    56  0003                     	;# 
+    57  0004                     	;# 
+    58  0005                     	;# 
+    59  0006                     	;# 
+    60  0007                     	;# 
+    61  0008                     	;# 
+    62  0009                     	;# 
+    63  000A                     	;# 
+    64  000B                     	;# 
+    65  000C                     	;# 
+    66  000D                     	;# 
+    67  000E                     	;# 
+    68  000E                     	;# 
+    69  000F                     	;# 
+    70  0010                     	;# 
+    71  0011                     	;# 
+    72  0012                     	;# 
+    73  0013                     	;# 
+    74  0014                     	;# 
+    75  0015                     	;# 
+    76  0015                     	;# 
+    77  0016                     	;# 
+    78  0017                     	;# 
+    79  0018                     	;# 
+    80  0019                     	;# 
+    81  001A                     	;# 
+    82  001B                     	;# 
+    83  001B                     	;# 
+    84  001C                     	;# 
+    85  001D                     	;# 
+    86  001E                     	;# 
+    87  001F                     	;# 
+    88  0081                     	;# 
+    89  0085                     	;# 
+    90  0086                     	;# 
+    91  0087                     	;# 
+    92  0088                     	;# 
+    93  0089                     	;# 
+    94  008C                     	;# 
+    95  008D                     	;# 
+    96  008E                     	;# 
+    97  0091                     	;# 
+    98  0092                     	;# 
+    99  0093                     	;# 
+   100  0094                     	;# 
+   101  0098                     	;# 
+   102  0099                     	;# 
+   103  009C                     	;# 
+   104  009D                     	;# 
+   105  009E                     	;# 
+   106  009F                     	;# 
+   107  010C                     	;# 
+   108  010D                     	;# 
+   109  010E                     	;# 
+   110  010F                     	;# 
+   111  018C                     	;# 
+   112  018D                     	;# 
+   113  0000                     	;# 
+   114  0001                     	;# 
+   115  0002                     	;# 
+   116  0003                     	;# 
+   117  0004                     	;# 
+   118  0005                     	;# 
+   119  0006                     	;# 
+   120  0007                     	;# 
+   121  0008                     	;# 
+   122  0009                     	;# 
+   123  000A                     	;# 
+   124  000B                     	;# 
+   125  000C                     	;# 
+   126  000D                     	;# 
+   127  000E                     	;# 
+   128  000E                     	;# 
+   129  000F                     	;# 
+   130  0010                     	;# 
+   131  0011                     	;# 
+   132  0012                     	;# 
+   133  0013                     	;# 
+   134  0014                     	;# 
+   135  0015                     	;# 
+   136  0015                     	;# 
+   137  0016                     	;# 
+   138  0017                     	;# 
+   139  0018                     	;# 
+   140  0019                     	;# 
+   141  001A                     	;# 
+   142  001B                     	;# 
+   143  001B                     	;# 
+   144  001C                     	;# 
+   145  001D                     	;# 
+   146  001E                     	;# 
+   147  001F                     	;# 
+   148  0081                     	;# 
+   149  0085                     	;# 
+   150  0086                     	;# 
+   151  0087                     	;# 
+   152  0088                     	;# 
+   153  0089                     	;# 
+   154  008C                     	;# 
+   155  008D                     	;# 
+   156  008E                     	;# 
+   157  0091                     	;# 
+   158  0092                     	;# 
+   159  0093                     	;# 
+   160  0094                     	;# 
+   161  0098                     	;# 
+   162  0099                     	;# 
+   163  009C                     	;# 
+   164  009D                     	;# 
+   165  009E                     	;# 
+   166  009F                     	;# 
+   167  010C                     	;# 
+   168  010D                     	;# 
+   169  010E                     	;# 
+   170  010F                     	;# 
+   171  018C                     	;# 
+   172  018D                     	;# 
+   173                           
+   174                           	psect	strings
+   175  0003                     __pstrings:	
+   176  0003                     stringtab:	
+   177  0003                     __stringtab:	
+   178  0003                     stringcode:	
+   179                           ;	String table - string pointers are 1 byte each
+   180                           
+   181  0003                     stringdir:	
+   182  0003  3000               	movlw	high stringdir
+   183  0004  008A               	movwf	10
+   184  0005  0804               	movf	4,w
+   185  0006  0A84               	incf	4,f
+   186  0007  0782               	addwf	2,f
+   187  0008                     __stringbase:	
+   188  0008  3400               	retlw	0
+   189  0009                     __end_of__stringtab:	
+   190  0009                     _table2:	
+   191  0009  34C0               	retlw	192
+   192  000A  34F9               	retlw	249
+   193  000B  34A4               	retlw	164
+   194  000C  34B0               	retlw	176
+   195  000D  3499               	retlw	153
+   196  000E  3492               	retlw	146
+   197  000F  3482               	retlw	130
+   198  0010  34F8               	retlw	248
+   199  0011  3480               	retlw	128
+   200  0012  3490               	retlw	144
+   201  0013                     __end_of_table2:	
+   202  0013                     _table:	
+   203  0013  3400               	retlw	0
+   204  0014  3458               	retlw	88
+   205  0015  3412               	retlw	18
+   206  0016  3408               	retlw	8
+   207  0017  3403               	retlw	3
+   208  0018  3406               	retlw	6
+   209  0019  3406               	retlw	6
+   210  001A  3400               	retlw	0
+   211  001B                     __end_of_table:	
+   212  0008                     _PORTD	set	8
+   213  0005                     _PORTA	set	5
+   214  0031                     _RB1	set	49
+   215  0034                     _RB4	set	52
+   216  0035                     _RB5	set	53
+   217  0030                     _RB0	set	48
+   218  0081                     _OPTION_REG	set	129
+   219  0086                     _TRISB	set	134
+   220  009F                     _ADCON1	set	159
+   221  0088                     _TRISD	set	136
+   222  0085                     _TRISA	set	133
+   223  0434                     _TRISB4	set	1076
+   224                           
+   225                           ; #config settings
+   226  0000                     
+   227                           	psect	cinit
+   228  07F3                     start_initialization:	
+   229  07F3                     __initialization:	
+   230                           
+   231                           ; Clear objects allocated to BANK0
+   232  07F3  1283               	bcf	3,5	;RP0=0, select bank0
+   233  07F4  1303               	bcf	3,6	;RP1=0, select bank0
+   234  07F5  01A0               	clrf	__pbssBANK0& (0+127)
+   235  07F6  01A1               	clrf	(__pbssBANK0+1)& (0+127)
+   236  07F7  01A2               	clrf	(__pbssBANK0+2)& (0+127)
+   237  07F8  01A3               	clrf	(__pbssBANK0+3)& (0+127)
+   238  07F9  01A4               	clrf	(__pbssBANK0+4)& (0+127)
+   239  07FA  01A5               	clrf	(__pbssBANK0+5)& (0+127)
+   240  07FB  01A6               	clrf	(__pbssBANK0+6)& (0+127)
+   241  07FC                     end_of_initialization:	
+   242                           ;End of C runtime variable initialization code
+   243                           
+   244  07FC                     __end_of__initialization:	
+   245  07FC  0183               	clrf	3
+   246  07FD  120A  118A  2E43   	ljmp	_main	;jump to C main() function
+   247                           
+   248                           	psect	bssBANK0
+   249  0020                     __pbssBANK0:	
+   250  0020                     _table1:	
+   251  0020                     	ds	7
+   252                           
+   253                           	psect	cstackCOMMON
+   254  0070                     __pcstackCOMMON:	
+   255  0070                     ?_port_init:	
+   256  0070                     ??_port_init:	
+   257                           ; 1 bytes @ 0x0
+   258                           
+   259  0070                     ?_ds1302_init:	
+   260                           ; 1 bytes @ 0x0
+   261                           
+   262  0070                     ?_set_time:	
+   263                           ; 1 bytes @ 0x0
+   264                           
+   265  0070                     ?_get_time:	
+   266                           ; 1 bytes @ 0x0
+   267                           
+   268  0070                     ?_display:	
+   269                           ; 1 bytes @ 0x0
+   270                           
+   271  0070                     ?_time_write_1:	
+   272                           ; 1 bytes @ 0x0
+   273                           
+   274  0070                     ??_time_write_1:	
+   275                           ; 1 bytes @ 0x0
+   276                           
+   277  0070                     ?_time_read_1:	
+   278                           ; 1 bytes @ 0x0
+   279                           
+   280  0070                     ??_time_read_1:	
+   281                           ; 1 bytes @ 0x0
+   282                           
+   283  0070                     ?_delay:	
+   284                           ; 1 bytes @ 0x0
+   285                           
+   286  0070                     ??_delay:	
+   287                           ; 1 bytes @ 0x0
+   288                           
+   289  0070                     ?_main:	
+   290                           ; 1 bytes @ 0x0
+   291                           
+   292  0070                     delay@i:	
+   293                           ; 1 bytes @ 0x0
+   294                           
+   295                           
+   296                           ; 2 bytes @ 0x0
+   297  0070                     	ds	2
+   298  0072                     ??_display:	
+   299  0072                     time_write_1@j:	
+   300                           ; 1 bytes @ 0x2
+   301                           
+   302  0072                     time_read_1@j:	
+   303                           ; 2 bytes @ 0x2
+   304                           
+   305                           
+   306                           ; 2 bytes @ 0x2
+   307  0072                     	ds	2
+   308  0074                     time_write_1@time_tx:	
+   309  0074                     time_read_1@time_rx:	
+   310                           ; 1 bytes @ 0x4
+   311                           
+   312  0074                     display@i:	
+   313                           ; 1 bytes @ 0x4
+   314                           
+   315                           
+   316                           ; 2 bytes @ 0x4
+   317  0074                     	ds	1
+   318  0075                     ??_ds1302_init:	
+   319  0075                     ??_set_time:	
+   320                           ; 1 bytes @ 0x5
+   321                           
+   322  0075                     ??_get_time:	
+   323                           ; 1 bytes @ 0x5
+   324                           
+   325  0075                     set_time@i:	
+   326                           ; 1 bytes @ 0x5
+   327                           
+   328                           
+   329                           ; 2 bytes @ 0x5
+   330  0075                     	ds	1
+   331  0076                     get_time@i:	
+   332                           
+   333                           ; 2 bytes @ 0x6
+   334  0076                     	ds	2
+   335  0078                     ??_main:	
+   336                           
+   337                           	psect	maintext
+   338  0643                     __pmaintext:	
+   339                           ; 1 bytes @ 0x8
+   340 ;;
+   341 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   342 ;;
+   343 ;; *************** function _main *****************
+   344 ;; Defined at:
+   345 ;;		line 45 in file "clock_test.c"
+   346 ;; Parameters:    Size  Location     Type
+   347 ;;		None
+   348 ;; Auto vars:     Size  Location     Type
+   349 ;;		None
+   350 ;; Return value:  Size  Location     Type
+   351 ;;                  1    wreg      void 
+   352 ;; Registers used:
+   353 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   354 ;; Tracked objects:
+   355 ;;		On entry : B00/0
+   356 ;;		On exit  : 0/0
+   357 ;;		Unchanged: 0/0
+   358 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   359 ;;      Params:         0       0       0       0       0
+   360 ;;      Locals:         0       0       0       0       0
+   361 ;;      Temps:          0       0       0       0       0
+   362 ;;      Totals:         0       0       0       0       0
+   363 ;;Total ram usage:        0 bytes
+   364 ;; Hardware stack levels required when called:    2
+   365 ;; This function calls:
+   366 ;;		_display
+   367 ;;		_ds1302_init
+   368 ;;		_get_time
+   369 ;;		_port_init
+   370 ;;		_set_time
+   371 ;; This function is called by:
+   372 ;;		Startup code after reset
+   373 ;; This function uses a non-reentrant model
+   374 ;;
+   375                           
+   376                           
+   377                           ;psect for function _main
+   378  0643                     _main:	
+   379  0643                     l984:	
+   380                           ;incstack = 0
+   381                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   382                           
+   383                           
+   384                           ;clock_test.c: 47:      port_init();
+   385  0643  120A  118A  260B  120A  118A  	fcall	_port_init
+   386  0648                     l986:	
+   387                           
+   388                           ;clock_test.c: 48:      ds1302_init();
+   389  0648  120A  118A  262E  120A  118A  	fcall	_ds1302_init
+   390  064D                     l988:	
+   391                           
+   392                           ;clock_test.c: 49:      set_time();
+   393  064D  120A  118A  26B9  120A  118A  	fcall	_set_time
+   394  0652                     l990:	
+   395                           
+   396                           ;clock_test.c: 51:         {;clock_test.c: 52:           get_time();
+   397  0652  120A  118A  268B  120A  118A  	fcall	_get_time
+   398  0657                     l992:	
+   399                           
+   400                           ;clock_test.c: 53:           display();
+   401  0657  120A  118A  271D  120A  118A  	fcall	_display
+   402  065C  2E52               	goto	l990
+   403  065D  120A  118A  2800   	ljmp	start
+   404  0660                     __end_of_main:	
+   405                           
+   406                           	psect	text1
+   407  06B9                     __ptext1:	
+   408 ;; *************** function _set_time *****************
+   409 ;; Defined at:
+   410 ;;		line 71 in file "clock_test.c"
+   411 ;; Parameters:    Size  Location     Type
+   412 ;;		None
+   413 ;; Auto vars:     Size  Location     Type
+   414 ;;  i               2    5[COMMON] int 
+   415 ;; Return value:  Size  Location     Type
+   416 ;;                  1    wreg      void 
+   417 ;; Registers used:
+   418 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   419 ;; Tracked objects:
+   420 ;;		On entry : 0/0
+   421 ;;		On exit  : 0/0
+   422 ;;		Unchanged: 0/0
+   423 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   424 ;;      Params:         0       0       0       0       0
+   425 ;;      Locals:         2       0       0       0       0
+   426 ;;      Temps:          0       0       0       0       0
+   427 ;;      Totals:         2       0       0       0       0
+   428 ;;Total ram usage:        2 bytes
+   429 ;; Hardware stack levels used:    1
+   430 ;; Hardware stack levels required when called:    1
+   431 ;; This function calls:
+   432 ;;		_time_write_1
+   433 ;; This function is called by:
+   434 ;;		_main
+   435 ;; This function uses a non-reentrant model
+   436 ;;
+   437                           
+   438                           
+   439                           ;psect for function _set_time
+   440  06B9                     _set_time:	
+   441  06B9                     l894:	
+   442                           ;incstack = 0
+   443                           ; Regs used in _set_time: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   444                           
+   445                           
+   446                           ;clock_test.c: 73:    int i;;clock_test.c: 74:    RB5=1;
+   447  06B9  1283               	bcf	3,5	;RP0=0, select bank0
+   448  06BA  1303               	bcf	3,6	;RP1=0, select bank0
+   449  06BB  1686               	bsf	6,5	;volatile
+   450  06BC                     l896:	
+   451                           
+   452                           ;clock_test.c: 75:    time_write_1(0xbe);
+   453  06BC  30BE               	movlw	190
+   454  06BD  120A  118A  2660  120A  118A  	fcall	_time_write_1
+   455  06C2                     l898:	
+   456                           
+   457                           ;clock_test.c: 76:    for(i=0;i<8;i++)
+   458  06C2  01F5               	clrf	set_time@i
+   459  06C3  01F6               	clrf	set_time@i+1
+   460  06C4                     l904:	
+   461                           
+   462                           ;clock_test.c: 77:      {;clock_test.c: 78:        time_write_1(table[i]);
+   463  06C4  0875               	movf	set_time@i,w
+   464  06C5  3E0B               	addlw	low ((_table-__stringbase)| (0+32768))
+   465  06C6  0084               	movwf	4
+   466  06C7  120A  118A  2003  120A  118A  	fcall	stringdir
+   467  06CC  120A  118A  2660  120A  118A  	fcall	_time_write_1
+   468  06D1                     l906:	
+   469                           
+   470                           ;clock_test.c: 79:      }
+   471  06D1  3001               	movlw	1
+   472  06D2  07F5               	addwf	set_time@i,f
+   473  06D3  1803               	skipnc
+   474  06D4  0AF6               	incf	set_time@i+1,f
+   475  06D5  3000               	movlw	0
+   476  06D6  07F6               	addwf	set_time@i+1,f
+   477  06D7                     l908:	
+   478  06D7  0876               	movf	set_time@i+1,w
+   479  06D8  3A80               	xorlw	128
+   480  06D9  00FF               	movwf	btemp+1
+   481  06DA  3080               	movlw	128
+   482  06DB  027F               	subwf	btemp+1,w
+   483  06DC  1D03               	skipz
+   484  06DD  2EE0               	goto	u145
+   485  06DE  3008               	movlw	8
+   486  06DF  0275               	subwf	set_time@i,w
+   487  06E0                     u145:	
+   488  06E0  1C03               	skipc
+   489  06E1  2EE3               	goto	u141
+   490  06E2  2EE4               	goto	u140
+   491  06E3                     u141:	
+   492  06E3  2EC4               	goto	l904
+   493  06E4                     u140:	
+   494  06E4                     l61:	
+   495                           
+   496                           ;clock_test.c: 80:    RB5=0;
+   497  06E4  1283               	bcf	3,5	;RP0=0, select bank0
+   498  06E5  1303               	bcf	3,6	;RP1=0, select bank0
+   499  06E6  1286               	bcf	6,5	;volatile
+   500  06E7                     l62:	
+   501  06E7  0008               	return
+   502  06E8                     __end_of_set_time:	
+   503                           
+   504                           	psect	text2
+   505  060B                     __ptext2:	
+   506 ;; *************** function _port_init *****************
+   507 ;; Defined at:
+   508 ;;		line 138 in file "clock_test.c"
+   509 ;; Parameters:    Size  Location     Type
+   510 ;;		None
+   511 ;; Auto vars:     Size  Location     Type
+   512 ;;		None
+   513 ;; Return value:  Size  Location     Type
+   514 ;;                  1    wreg      void 
+   515 ;; Registers used:
+   516 ;;		wreg, status,2
+   517 ;; Tracked objects:
+   518 ;;		On entry : 0/0
+   519 ;;		On exit  : 0/0
+   520 ;;		Unchanged: 0/0
+   521 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   522 ;;      Params:         0       0       0       0       0
+   523 ;;      Locals:         0       0       0       0       0
+   524 ;;      Temps:          0       0       0       0       0
+   525 ;;      Totals:         0       0       0       0       0
+   526 ;;Total ram usage:        0 bytes
+   527 ;; Hardware stack levels used:    1
+   528 ;; This function calls:
+   529 ;;		Nothing
+   530 ;; This function is called by:
+   531 ;;		_main
+   532 ;; This function uses a non-reentrant model
+   533 ;;
+   534                           
+   535                           
+   536                           ;psect for function _port_init
+   537  060B                     _port_init:	
+   538  060B                     l728:	
+   539                           ;incstack = 0
+   540                           ; Regs used in _port_init: [wreg+status,2]
+   541                           
+   542                           
+   543                           ;clock_test.c: 140:     TRISA=0x00;
+   544  060B  1683               	bsf	3,5	;RP0=1, select bank1
+   545  060C  1303               	bcf	3,6	;RP1=0, select bank1
+   546  060D  0185               	clrf	5	;volatile
+   547                           
+   548                           ;clock_test.c: 141:     TRISD=0X00;
+   549  060E  0188               	clrf	8	;volatile
+   550  060F                     l730:	
+   551                           
+   552                           ;clock_test.c: 142:     ADCON1=0X06;
+   553  060F  3006               	movlw	6
+   554  0610  009F               	movwf	31	;volatile
+   555  0611                     l732:	
+   556                           
+   557                           ;clock_test.c: 143:     TRISB=0X02;
+   558  0611  3002               	movlw	2
+   559  0612  0086               	movwf	6	;volatile
+   560                           
+   561                           ;clock_test.c: 144:     OPTION_REG=0X00;
+   562  0613  0181               	clrf	1	;volatile
+   563  0614                     l734:	
+   564                           
+   565                           ;clock_test.c: 145:     PORTA=0XFF;
+   566  0614  30FF               	movlw	255
+   567  0615  1283               	bcf	3,5	;RP0=0, select bank0
+   568  0616  1303               	bcf	3,6	;RP1=0, select bank0
+   569  0617  0085               	movwf	5	;volatile
+   570  0618                     l736:	
+   571                           
+   572                           ;clock_test.c: 146:     PORTD=0XFF;
+   573  0618  30FF               	movlw	255
+   574  0619  0088               	movwf	8	;volatile
+   575  061A                     l82:	
+   576  061A  0008               	return
+   577  061B                     __end_of_port_init:	
+   578                           
+   579                           	psect	text3
+   580  068B                     __ptext3:	
+   581 ;; *************** function _get_time *****************
+   582 ;; Defined at:
+   583 ;;		line 85 in file "clock_test.c"
+   584 ;; Parameters:    Size  Location     Type
+   585 ;;		None
+   586 ;; Auto vars:     Size  Location     Type
+   587 ;;  i               2    6[COMMON] int 
+   588 ;; Return value:  Size  Location     Type
+   589 ;;                  1    wreg      void 
+   590 ;; Registers used:
+   591 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   592 ;; Tracked objects:
+   593 ;;		On entry : 0/0
+   594 ;;		On exit  : 0/0
+   595 ;;		Unchanged: 0/0
+   596 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   597 ;;      Params:         0       0       0       0       0
+   598 ;;      Locals:         2       0       0       0       0
+   599 ;;      Temps:          1       0       0       0       0
+   600 ;;      Totals:         3       0       0       0       0
+   601 ;;Total ram usage:        3 bytes
+   602 ;; Hardware stack levels used:    1
+   603 ;; Hardware stack levels required when called:    1
+   604 ;; This function calls:
+   605 ;;		_time_read_1
+   606 ;;		_time_write_1
+   607 ;; This function is called by:
+   608 ;;		_main
+   609 ;; This function uses a non-reentrant model
+   610 ;;
+   611                           
+   612                           
+   613                           ;psect for function _get_time
+   614  068B                     _get_time:	
+   615  068B                     l910:	
+   616                           ;incstack = 0
+   617                           ; Regs used in _get_time: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   618                           
+   619                           
+   620                           ;clock_test.c: 87:    int i;;clock_test.c: 88:    RB5=1;
+   621  068B  1283               	bcf	3,5	;RP0=0, select bank0
+   622  068C  1303               	bcf	3,6	;RP1=0, select bank0
+   623  068D  1686               	bsf	6,5	;volatile
+   624  068E                     l912:	
+   625                           
+   626                           ;clock_test.c: 89:    time_write_1(0xbf);
+   627  068E  30BF               	movlw	191
+   628  068F  120A  118A  2660  120A  118A  	fcall	_time_write_1
+   629  0694                     l914:	
+   630                           
+   631                           ;clock_test.c: 90:    for(i=0;i<7;i++)
+   632  0694  01F6               	clrf	get_time@i
+   633  0695  01F7               	clrf	get_time@i+1
+   634  0696                     l920:	
+   635                           
+   636                           ;clock_test.c: 91:      {;clock_test.c: 92:         table1[i]=time_read_1();
+   637  0696  120A  118A  26E8  120A  118A  	fcall	_time_read_1
+   638  069B  00F5               	movwf	??_get_time
+   639  069C  0876               	movf	get_time@i,w
+   640  069D  3E20               	addlw	(low (_table1| 0))& (0+255)
+   641  069E  0084               	movwf	4
+   642  069F  0875               	movf	??_get_time,w
+   643  06A0  1383               	bcf	3,7	;select IRP bank0
+   644  06A1  0080               	movwf	0
+   645  06A2                     l922:	
+   646                           
+   647                           ;clock_test.c: 93:      }
+   648  06A2  3001               	movlw	1
+   649  06A3  07F6               	addwf	get_time@i,f
+   650  06A4  1803               	skipnc
+   651  06A5  0AF7               	incf	get_time@i+1,f
+   652  06A6  3000               	movlw	0
+   653  06A7  07F7               	addwf	get_time@i+1,f
+   654  06A8                     l924:	
+   655  06A8  0877               	movf	get_time@i+1,w
+   656  06A9  3A80               	xorlw	128
+   657  06AA  00FF               	movwf	btemp+1
+   658  06AB  3080               	movlw	128
+   659  06AC  027F               	subwf	btemp+1,w
+   660  06AD  1D03               	skipz
+   661  06AE  2EB1               	goto	u155
+   662  06AF  3007               	movlw	7
+   663  06B0  0276               	subwf	get_time@i,w
+   664  06B1                     u155:	
+   665  06B1  1C03               	skipc
+   666  06B2  2EB4               	goto	u151
+   667  06B3  2EB5               	goto	u150
+   668  06B4                     u151:	
+   669  06B4  2E96               	goto	l920
+   670  06B5                     u150:	
+   671  06B5                     l66:	
+   672                           
+   673                           ;clock_test.c: 94:     RB5=0;
+   674  06B5  1283               	bcf	3,5	;RP0=0, select bank0
+   675  06B6  1303               	bcf	3,6	;RP1=0, select bank0
+   676  06B7  1286               	bcf	6,5	;volatile
+   677  06B8                     l67:	
+   678  06B8  0008               	return
+   679  06B9                     __end_of_get_time:	
+   680                           
+   681                           	psect	text4
+   682  06E8                     __ptext4:	
+   683 ;; *************** function _time_read_1 *****************
+   684 ;; Defined at:
+   685 ;;		line 118 in file "clock_test.c"
+   686 ;; Parameters:    Size  Location     Type
+   687 ;;		None
+   688 ;; Auto vars:     Size  Location     Type
+   689 ;;  j               2    2[COMMON] int 
+   690 ;;  time_rx         1    4[COMMON] unsigned char 
+   691 ;; Return value:  Size  Location     Type
+   692 ;;                  1    wreg      unsigned char 
+   693 ;; Registers used:
+   694 ;;		wreg, status,2, status,0, btemp+1
+   695 ;; Tracked objects:
+   696 ;;		On entry : 0/0
+   697 ;;		On exit  : 0/0
+   698 ;;		Unchanged: 0/0
+   699 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   700 ;;      Params:         0       0       0       0       0
+   701 ;;      Locals:         3       0       0       0       0
+   702 ;;      Temps:          2       0       0       0       0
+   703 ;;      Totals:         5       0       0       0       0
+   704 ;;Total ram usage:        5 bytes
+   705 ;; Hardware stack levels used:    1
+   706 ;; This function calls:
+   707 ;;		Nothing
+   708 ;; This function is called by:
+   709 ;;		_get_time
+   710 ;; This function uses a non-reentrant model
+   711 ;;
+   712                           
+   713                           
+   714                           ;psect for function _time_read_1
+   715  06E8                     _time_read_1:	
+   716  06E8                     l860:	
+   717                           ;incstack = 0
+   718                           ; Regs used in _time_read_1: [wreg+status,2+status,0+btemp+1]
+   719                           
+   720                           
+   721                           ;clock_test.c: 120:     unsigned char time_rx=0;
+   722  06E8  01F4               	clrf	time_read_1@time_rx
+   723  06E9                     l862:	
+   724                           
+   725                           ;clock_test.c: 121:    int j;;clock_test.c: 122:    TRISB4=1;
+   726  06E9  1683               	bsf	3,5	;RP0=1, select bank1
+   727  06EA  1303               	bcf	3,6	;RP1=0, select bank1
+   728  06EB  1606               	bsf	6,4	;volatile
+   729                           
+   730                           ;clock_test.c: 123:    for(j=0;j<8;j++)
+   731  06EC  01F2               	clrf	time_read_1@j
+   732  06ED  01F3               	clrf	time_read_1@j+1
+   733  06EE                     l76:	
+   734                           
+   735                           ;clock_test.c: 124:       {;clock_test.c: 125:         RB0=0;
+   736  06EE  1283               	bcf	3,5	;RP0=0, select bank0
+   737  06EF  1303               	bcf	3,6	;RP1=0, select bank0
+   738  06F0  1006               	bcf	6,0	;volatile
+   739  06F1                     l868:	
+   740                           
+   741                           ;clock_test.c: 126:         time_rx=time_rx>>1;
+   742  06F1  0874               	movf	time_read_1@time_rx,w
+   743  06F2  00F0               	movwf	??_time_read_1
+   744  06F3  1003               	clrc
+   745  06F4  0C70               	rrf	??_time_read_1,w
+   746  06F5  00F1               	movwf	??_time_read_1+1
+   747  06F6  0871               	movf	??_time_read_1+1,w
+   748  06F7  00F4               	movwf	time_read_1@time_rx
+   749  06F8                     l870:	
+   750                           
+   751                           ;clock_test.c: 127:         if(RB4)time_rx=time_rx|0x80;
+   752  06F8  1E06               	btfss	6,4	;volatile
+   753  06F9  2EFB               	goto	u111
+   754  06FA  2EFC               	goto	u110
+   755  06FB                     u111:	
+   756  06FB  2F01               	goto	l874
+   757  06FC                     u110:	
+   758  06FC                     l872:	
+   759  06FC  0874               	movf	time_read_1@time_rx,w
+   760  06FD  3880               	iorlw	128
+   761  06FE  00F0               	movwf	??_time_read_1
+   762  06FF  0870               	movf	??_time_read_1,w
+   763  0700  00F4               	movwf	time_read_1@time_rx
+   764  0701                     l874:	
+   765                           
+   766                           ;clock_test.c: 129:        RB0=1;
+   767  0701  1406               	bsf	6,0	;volatile
+   768  0702                     l876:	
+   769                           
+   770                           ;clock_test.c: 130:       }
+   771  0702  3001               	movlw	1
+   772  0703  07F2               	addwf	time_read_1@j,f
+   773  0704  1803               	skipnc
+   774  0705  0AF3               	incf	time_read_1@j+1,f
+   775  0706  3000               	movlw	0
+   776  0707  07F3               	addwf	time_read_1@j+1,f
+   777  0708                     l878:	
+   778  0708  0873               	movf	time_read_1@j+1,w
+   779  0709  3A80               	xorlw	128
+   780  070A  00FF               	movwf	btemp+1
+   781  070B  3080               	movlw	128
+   782  070C  027F               	subwf	btemp+1,w
+   783  070D  1D03               	skipz
+   784  070E  2F11               	goto	u125
+   785  070F  3008               	movlw	8
+   786  0710  0272               	subwf	time_read_1@j,w
+   787  0711                     u125:	
+   788  0711  1C03               	skipc
+   789  0712  2F14               	goto	u121
+   790  0713  2F15               	goto	u120
+   791  0714                     u121:	
+   792  0714  2EEE               	goto	l76
+   793  0715                     u120:	
+   794  0715                     l77:	
+   795                           
+   796                           ;clock_test.c: 131:     TRISB4=0;
+   797  0715  1683               	bsf	3,5	;RP0=1, select bank1
+   798  0716  1303               	bcf	3,6	;RP1=0, select bank1
+   799  0717  1206               	bcf	6,4	;volatile
+   800                           
+   801                           ;clock_test.c: 132:     RB0=0;
+   802  0718  1283               	bcf	3,5	;RP0=0, select bank0
+   803  0719  1303               	bcf	3,6	;RP1=0, select bank0
+   804  071A  1006               	bcf	6,0	;volatile
+   805  071B                     l880:	
+   806                           
+   807                           ;clock_test.c: 133:     return(time_rx);
+   808  071B  0874               	movf	time_read_1@time_rx,w
+   809  071C                     l79:	
+   810  071C  0008               	return
+   811  071D                     __end_of_time_read_1:	
+   812                           
+   813                           	psect	text5
+   814  062E                     __ptext5:	
+   815 ;; *************** function _ds1302_init *****************
+   816 ;; Defined at:
+   817 ;;		line 59 in file "clock_test.c"
+   818 ;; Parameters:    Size  Location     Type
+   819 ;;		None
+   820 ;; Auto vars:     Size  Location     Type
+   821 ;;		None
+   822 ;; Return value:  Size  Location     Type
+   823 ;;                  1    wreg      void 
+   824 ;; Registers used:
+   825 ;;		wreg, status,2, status,0, btemp+1, pclath, cstack
+   826 ;; Tracked objects:
+   827 ;;		On entry : 0/0
+   828 ;;		On exit  : 0/0
+   829 ;;		Unchanged: 0/0
+   830 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   831 ;;      Params:         0       0       0       0       0
+   832 ;;      Locals:         0       0       0       0       0
+   833 ;;      Temps:          0       0       0       0       0
+   834 ;;      Totals:         0       0       0       0       0
+   835 ;;Total ram usage:        0 bytes
+   836 ;; Hardware stack levels used:    1
+   837 ;; Hardware stack levels required when called:    1
+   838 ;; This function calls:
+   839 ;;		_time_write_1
+   840 ;; This function is called by:
+   841 ;;		_main
+   842 ;; This function uses a non-reentrant model
+   843 ;;
+   844                           
+   845                           
+   846                           ;psect for function _ds1302_init
+   847  062E                     _ds1302_init:	
+   848  062E                     l888:	
+   849                           ;incstack = 0
+   850                           ; Regs used in _ds1302_init: [wreg+status,2+status,0+btemp+1+pclath+cstack]
+   851                           
+   852                           
+   853                           ;clock_test.c: 61:    RB0=0;
+   854  062E  1283               	bcf	3,5	;RP0=0, select bank0
+   855  062F  1303               	bcf	3,6	;RP1=0, select bank0
+   856  0630  1006               	bcf	6,0	;volatile
+   857                           
+   858                           ;clock_test.c: 62:    RB5 =0;
+   859  0631  1286               	bcf	6,5	;volatile
+   860                           
+   861                           ;clock_test.c: 63:    RB5=1;
+   862  0632  1686               	bsf	6,5	;volatile
+   863  0633                     l890:	
+   864                           
+   865                           ;clock_test.c: 64:    time_write_1(0x8e);
+   866  0633  308E               	movlw	142
+   867  0634  120A  118A  2660  120A  118A  	fcall	_time_write_1
+   868                           
+   869                           ;clock_test.c: 65:    time_write_1(0);
+   870  0639  3000               	movlw	0
+   871  063A  120A  118A  2660  120A  118A  	fcall	_time_write_1
+   872  063F                     l892:	
+   873                           
+   874                           ;clock_test.c: 66:    RB5=0;
+   875  063F  1283               	bcf	3,5	;RP0=0, select bank0
+   876  0640  1303               	bcf	3,6	;RP1=0, select bank0
+   877  0641  1286               	bcf	6,5	;volatile
+   878  0642                     l57:	
+   879  0642  0008               	return
+   880  0643                     __end_of_ds1302_init:	
+   881                           
+   882                           	psect	text6
+   883  0660                     __ptext6:	
+   884 ;; *************** function _time_write_1 *****************
+   885 ;; Defined at:
+   886 ;;		line 99 in file "clock_test.c"
+   887 ;; Parameters:    Size  Location     Type
+   888 ;;  time_tx         1    wreg     unsigned char 
+   889 ;; Auto vars:     Size  Location     Type
+   890 ;;  time_tx         1    4[COMMON] unsigned char 
+   891 ;;  j               2    2[COMMON] int 
+   892 ;; Return value:  Size  Location     Type
+   893 ;;                  1    wreg      void 
+   894 ;; Registers used:
+   895 ;;		wreg, status,2, status,0, btemp+1
+   896 ;; Tracked objects:
+   897 ;;		On entry : 0/0
+   898 ;;		On exit  : 0/0
+   899 ;;		Unchanged: 0/0
+   900 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   901 ;;      Params:         0       0       0       0       0
+   902 ;;      Locals:         3       0       0       0       0
+   903 ;;      Temps:          2       0       0       0       0
+   904 ;;      Totals:         5       0       0       0       0
+   905 ;;Total ram usage:        5 bytes
+   906 ;; Hardware stack levels used:    1
+   907 ;; This function calls:
+   908 ;;		Nothing
+   909 ;; This function is called by:
+   910 ;;		_ds1302_init
+   911 ;;		_set_time
+   912 ;;		_get_time
+   913 ;; This function uses a non-reentrant model
+   914 ;;
+   915                           
+   916                           
+   917                           ;psect for function _time_write_1
+   918  0660                     _time_write_1:	
+   919                           
+   920                           ;incstack = 0
+   921                           ; Regs used in _time_write_1: [wreg+status,2+status,0+btemp+1]
+   922                           ;time_write_1@time_tx stored from wreg
+   923  0660  00F4               	movwf	time_write_1@time_tx
+   924  0661                     l844:	
+   925                           
+   926                           ;clock_test.c: 99: void time_write_1(unsigned char time_tx);clock_test.c: 100:  {;clock_
+      +                          test.c: 101:     int j;;clock_test.c: 102:     for(j=0;j<8;j++)
+   927  0661  01F2               	clrf	time_write_1@j
+   928  0662  01F3               	clrf	time_write_1@j+1
+   929  0663                     l70:	
+   930                           
+   931                           ;clock_test.c: 103:       {;clock_test.c: 104:         RB4=0;
+   932  0663  1283               	bcf	3,5	;RP0=0, select bank0
+   933  0664  1303               	bcf	3,6	;RP1=0, select bank0
+   934  0665  1206               	bcf	6,4	;volatile
+   935                           
+   936                           ;clock_test.c: 105:         RB0=0;
+   937  0666  1006               	bcf	6,0	;volatile
+   938                           
+   939                           ;clock_test.c: 106:         if(time_tx&0x01)
+   940  0667  1C74               	btfss	time_write_1@time_tx,0
+   941  0668  2E6A               	goto	u91
+   942  0669  2E6B               	goto	u90
+   943  066A                     u91:	
+   944  066A  2E6C               	goto	l852
+   945  066B                     u90:	
+   946  066B                     l850:	
+   947                           
+   948                           ;clock_test.c: 107:           {;clock_test.c: 108:             RB4=1;
+   949  066B  1606               	bsf	6,4	;volatile
+   950  066C                     l852:	
+   951                           
+   952                           ;clock_test.c: 110:         time_tx=time_tx>>1;
+   953  066C  0874               	movf	time_write_1@time_tx,w
+   954  066D  00F0               	movwf	??_time_write_1
+   955  066E  1003               	clrc
+   956  066F  0C70               	rrf	??_time_write_1,w
+   957  0670  00F1               	movwf	??_time_write_1+1
+   958  0671  0871               	movf	??_time_write_1+1,w
+   959  0672  00F4               	movwf	time_write_1@time_tx
+   960  0673                     l854:	
+   961                           
+   962                           ;clock_test.c: 111:         RB0=1;
+   963  0673  1406               	bsf	6,0	;volatile
+   964  0674                     l856:	
+   965                           
+   966                           ;clock_test.c: 112:        }
+   967  0674  3001               	movlw	1
+   968  0675  07F2               	addwf	time_write_1@j,f
+   969  0676  1803               	skipnc
+   970  0677  0AF3               	incf	time_write_1@j+1,f
+   971  0678  3000               	movlw	0
+   972  0679  07F3               	addwf	time_write_1@j+1,f
+   973  067A                     l858:	
+   974  067A  0873               	movf	time_write_1@j+1,w
+   975  067B  3A80               	xorlw	128
+   976  067C  00FF               	movwf	btemp+1
+   977  067D  3080               	movlw	128
+   978  067E  027F               	subwf	btemp+1,w
+   979  067F  1D03               	skipz
+   980  0680  2E83               	goto	u105
+   981  0681  3008               	movlw	8
+   982  0682  0272               	subwf	time_write_1@j,w
+   983  0683                     u105:	
+   984  0683  1C03               	skipc
+   985  0684  2E86               	goto	u101
+   986  0685  2E87               	goto	u100
+   987  0686                     u101:	
+   988  0686  2E63               	goto	l70
+   989  0687                     u100:	
+   990  0687                     l71:	
+   991                           
+   992                           ;clock_test.c: 113:       RB0=0;
+   993  0687  1283               	bcf	3,5	;RP0=0, select bank0
+   994  0688  1303               	bcf	3,6	;RP1=0, select bank0
+   995  0689  1006               	bcf	6,0	;volatile
+   996  068A                     l73:	
+   997  068A  0008               	return
+   998  068B                     __end_of_time_write_1:	
+   999                           
+  1000                           	psect	text7
+  1001  071D                     __ptext7:	
+  1002 ;; *************** function _display *****************
+  1003 ;; Defined at:
+  1004 ;;		line 151 in file "clock_test.c"
+  1005 ;; Parameters:    Size  Location     Type
+  1006 ;;		None
+  1007 ;; Auto vars:     Size  Location     Type
+  1008 ;;  i               2    4[COMMON] int 
+  1009 ;; Return value:  Size  Location     Type
+  1010 ;;                  1    wreg      void 
+  1011 ;; Registers used:
+  1012 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1013 ;; Tracked objects:
+  1014 ;;		On entry : 0/0
+  1015 ;;		On exit  : 0/0
+  1016 ;;		Unchanged: 0/0
+  1017 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1018 ;;      Params:         0       0       0       0       0
+  1019 ;;      Locals:         2       0       0       0       0
+  1020 ;;      Temps:          2       0       0       0       0
+  1021 ;;      Totals:         4       0       0       0       0
+  1022 ;;Total ram usage:        4 bytes
+  1023 ;; Hardware stack levels used:    1
+  1024 ;; Hardware stack levels required when called:    1
+  1025 ;; This function calls:
+  1026 ;;		_delay
+  1027 ;; This function is called by:
+  1028 ;;		_main
+  1029 ;; This function uses a non-reentrant model
+  1030 ;;
+  1031                           
+  1032                           
+  1033                           ;psect for function _display
+  1034  071D                     _display:	
+  1035  071D                     l926:	
+  1036                           ;incstack = 0
+  1037                           ; Regs used in _display: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1038                           
+  1039                           
+  1040                           ;clock_test.c: 153:      int i;;clock_test.c: 154:      if(RB1==0)
+  1041  071D  1283               	bcf	3,5	;RP0=0, select bank0
+  1042  071E  1303               	bcf	3,6	;RP1=0, select bank0
+  1043  071F  1886               	btfsc	6,1	;volatile
+  1044  0720  2F22               	goto	u161
+  1045  0721  2F23               	goto	u160
+  1046  0722                     u161:	
+  1047  0722  2F2F               	goto	l930
+  1048  0723                     u160:	
+  1049  0723                     l928:	
+  1050                           
+  1051                           ;clock_test.c: 155:        {;clock_test.c: 156:           table1[0]=table1[3];
+  1052  0723  0823               	movf	_table1+3,w
+  1053  0724  00F2               	movwf	??_display
+  1054  0725  0872               	movf	??_display,w
+  1055  0726  00A0               	movwf	_table1
+  1056                           
+  1057                           ;clock_test.c: 157:           table1[1]=table1[4];
+  1058  0727  0824               	movf	_table1+4,w
+  1059  0728  00F2               	movwf	??_display
+  1060  0729  0872               	movf	??_display,w
+  1061  072A  00A1               	movwf	_table1+1
+  1062                           
+  1063                           ;clock_test.c: 158:           table1[2]=table1[6];
+  1064  072B  0826               	movf	_table1+6,w
+  1065  072C  00F2               	movwf	??_display
+  1066  072D  0872               	movf	??_display,w
+  1067  072E  00A2               	movwf	_table1+2
+  1068  072F                     l930:	
+  1069                           
+  1070                           ;clock_test.c: 160:      i=table1[0]&0x0f;
+  1071  072F  0820               	movf	_table1,w
+  1072  0730  390F               	andlw	15
+  1073  0731  00F2               	movwf	??_display
+  1074  0732  01F3               	clrf	??_display+1
+  1075  0733  0872               	movf	??_display,w
+  1076  0734  00F4               	movwf	display@i
+  1077  0735  0873               	movf	??_display+1,w
+  1078  0736  00F5               	movwf	display@i+1
+  1079  0737                     l932:	
+  1080                           
+  1081                           ;clock_test.c: 161:      PORTD=table2[i];
+  1082  0737  0874               	movf	display@i,w
+  1083  0738  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1084  0739  0084               	movwf	4
+  1085  073A  120A  118A  2003  120A  118A  	fcall	stringdir
+  1086  073F  0088               	movwf	8	;volatile
+  1087  0740                     l934:	
+  1088                           
+  1089                           ;clock_test.c: 162:      PORTA=0x1f;
+  1090  0740  301F               	movlw	31
+  1091  0741  0085               	movwf	5	;volatile
+  1092  0742                     l936:	
+  1093                           
+  1094                           ;clock_test.c: 163:      delay();
+  1095  0742  120A  118A  261B  120A  118A  	fcall	_delay
+  1096  0747                     l938:	
+  1097                           
+  1098                           ;clock_test.c: 164:      i=table1[0]&0xf0;
+  1099  0747  1283               	bcf	3,5	;RP0=0, select bank0
+  1100  0748  1303               	bcf	3,6	;RP1=0, select bank0
+  1101  0749  0820               	movf	_table1,w
+  1102  074A  39F0               	andlw	240
+  1103  074B  00F2               	movwf	??_display
+  1104  074C  01F3               	clrf	??_display+1
+  1105  074D  0872               	movf	??_display,w
+  1106  074E  00F4               	movwf	display@i
+  1107  074F  0873               	movf	??_display+1,w
+  1108  0750  00F5               	movwf	display@i+1
+  1109  0751                     l940:	
+  1110                           
+  1111                           ;clock_test.c: 165:      i=i>>4;
+  1112  0751  0E74               	swapf	display@i,w
+  1113  0752  390F               	andlw	15
+  1114  0753  00F4               	movwf	display@i
+  1115  0754  0E75               	swapf	display@i+1,w
+  1116  0755  39F0               	andlw	240
+  1117  0756  04F4               	iorwf	display@i,f
+  1118  0757  0E75               	swapf	display@i+1,w
+  1119  0758  390F               	andlw	15
+  1120  0759  00F5               	movwf	display@i+1
+  1121  075A  30F0               	movlw	240
+  1122  075B  1DF5               	btfss	display@i+1,3
+  1123  075C  3000               	movlw	0
+  1124  075D  04F5               	iorwf	display@i+1,f
+  1125  075E                     l942:	
+  1126                           
+  1127                           ;clock_test.c: 166:      PORTD=table2[i];
+  1128  075E  0874               	movf	display@i,w
+  1129  075F  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1130  0760  0084               	movwf	4
+  1131  0761  120A  118A  2003  120A  118A  	fcall	stringdir
+  1132  0766  0088               	movwf	8	;volatile
+  1133  0767                     l944:	
+  1134                           
+  1135                           ;clock_test.c: 167:      PORTA=0x2f;
+  1136  0767  302F               	movlw	47
+  1137  0768  0085               	movwf	5	;volatile
+  1138  0769                     l946:	
+  1139                           
+  1140                           ;clock_test.c: 168:      delay();
+  1141  0769  120A  118A  261B  120A  118A  	fcall	_delay
+  1142  076E                     l948:	
+  1143                           
+  1144                           ;clock_test.c: 170:      i=table1[1]&0x0f;
+  1145  076E  1283               	bcf	3,5	;RP0=0, select bank0
+  1146  076F  1303               	bcf	3,6	;RP1=0, select bank0
+  1147  0770  0821               	movf	_table1+1,w
+  1148  0771  390F               	andlw	15
+  1149  0772  00F2               	movwf	??_display
+  1150  0773  01F3               	clrf	??_display+1
+  1151  0774  0872               	movf	??_display,w
+  1152  0775  00F4               	movwf	display@i
+  1153  0776  0873               	movf	??_display+1,w
+  1154  0777  00F5               	movwf	display@i+1
+  1155  0778                     l950:	
+  1156                           
+  1157                           ;clock_test.c: 171:      PORTD=table2[i]&0x7f;
+  1158  0778  0874               	movf	display@i,w
+  1159  0779  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1160  077A  0084               	movwf	4
+  1161  077B  120A  118A  2003  120A  118A  	fcall	stringdir
+  1162  0780  397F               	andlw	127
+  1163  0781  0088               	movwf	8	;volatile
+  1164  0782                     l952:	
+  1165                           
+  1166                           ;clock_test.c: 172:      PORTA=0x37;
+  1167  0782  3037               	movlw	55
+  1168  0783  0085               	movwf	5	;volatile
+  1169  0784                     l954:	
+  1170                           
+  1171                           ;clock_test.c: 173:      delay();
+  1172  0784  120A  118A  261B  120A  118A  	fcall	_delay
+  1173  0789                     l956:	
+  1174                           
+  1175                           ;clock_test.c: 174:      i=table1[1]&0xf0;
+  1176  0789  1283               	bcf	3,5	;RP0=0, select bank0
+  1177  078A  1303               	bcf	3,6	;RP1=0, select bank0
+  1178  078B  0821               	movf	_table1+1,w
+  1179  078C  39F0               	andlw	240
+  1180  078D  00F2               	movwf	??_display
+  1181  078E  01F3               	clrf	??_display+1
+  1182  078F  0872               	movf	??_display,w
+  1183  0790  00F4               	movwf	display@i
+  1184  0791  0873               	movf	??_display+1,w
+  1185  0792  00F5               	movwf	display@i+1
+  1186  0793                     l958:	
+  1187                           
+  1188                           ;clock_test.c: 175:      i=i>>4;
+  1189  0793  0E74               	swapf	display@i,w
+  1190  0794  390F               	andlw	15
+  1191  0795  00F4               	movwf	display@i
+  1192  0796  0E75               	swapf	display@i+1,w
+  1193  0797  39F0               	andlw	240
+  1194  0798  04F4               	iorwf	display@i,f
+  1195  0799  0E75               	swapf	display@i+1,w
+  1196  079A  390F               	andlw	15
+  1197  079B  00F5               	movwf	display@i+1
+  1198  079C  30F0               	movlw	240
+  1199  079D  1DF5               	btfss	display@i+1,3
+  1200  079E  3000               	movlw	0
+  1201  079F  04F5               	iorwf	display@i+1,f
+  1202  07A0                     l960:	
+  1203                           
+  1204                           ;clock_test.c: 176:      PORTD=table2[i];
+  1205  07A0  0874               	movf	display@i,w
+  1206  07A1  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1207  07A2  0084               	movwf	4
+  1208  07A3  120A  118A  2003  120A  118A  	fcall	stringdir
+  1209  07A8  0088               	movwf	8	;volatile
+  1210  07A9                     l962:	
+  1211                           
+  1212                           ;clock_test.c: 177:      PORTA=0x3b;
+  1213  07A9  303B               	movlw	59
+  1214  07AA  0085               	movwf	5	;volatile
+  1215  07AB                     l964:	
+  1216                           
+  1217                           ;clock_test.c: 178:      delay();
+  1218  07AB  120A  118A  261B  120A  118A  	fcall	_delay
+  1219  07B0                     l966:	
+  1220                           
+  1221                           ;clock_test.c: 180:      i=table1[2]&0x0f;
+  1222  07B0  1283               	bcf	3,5	;RP0=0, select bank0
+  1223  07B1  1303               	bcf	3,6	;RP1=0, select bank0
+  1224  07B2  0822               	movf	_table1+2,w
+  1225  07B3  390F               	andlw	15
+  1226  07B4  00F2               	movwf	??_display
+  1227  07B5  01F3               	clrf	??_display+1
+  1228  07B6  0872               	movf	??_display,w
+  1229  07B7  00F4               	movwf	display@i
+  1230  07B8  0873               	movf	??_display+1,w
+  1231  07B9  00F5               	movwf	display@i+1
+  1232  07BA                     l968:	
+  1233                           
+  1234                           ;clock_test.c: 181:      PORTD=table2[i]&0x7f;
+  1235  07BA  0874               	movf	display@i,w
+  1236  07BB  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1237  07BC  0084               	movwf	4
+  1238  07BD  120A  118A  2003  120A  118A  	fcall	stringdir
+  1239  07C2  397F               	andlw	127
+  1240  07C3  0088               	movwf	8	;volatile
+  1241  07C4                     l970:	
+  1242                           
+  1243                           ;clock_test.c: 182:      PORTA=0x3d;
+  1244  07C4  303D               	movlw	61
+  1245  07C5  0085               	movwf	5	;volatile
+  1246  07C6                     l972:	
+  1247                           
+  1248                           ;clock_test.c: 183:      delay();
+  1249  07C6  120A  118A  261B  120A  118A  	fcall	_delay
+  1250  07CB                     l974:	
+  1251                           
+  1252                           ;clock_test.c: 184:      i=table1[2]&0xf0;
+  1253  07CB  1283               	bcf	3,5	;RP0=0, select bank0
+  1254  07CC  1303               	bcf	3,6	;RP1=0, select bank0
+  1255  07CD  0822               	movf	_table1+2,w
+  1256  07CE  39F0               	andlw	240
+  1257  07CF  00F2               	movwf	??_display
+  1258  07D0  01F3               	clrf	??_display+1
+  1259  07D1  0872               	movf	??_display,w
+  1260  07D2  00F4               	movwf	display@i
+  1261  07D3  0873               	movf	??_display+1,w
+  1262  07D4  00F5               	movwf	display@i+1
+  1263  07D5                     l976:	
+  1264                           
+  1265                           ;clock_test.c: 185:      i=i>>4;
+  1266  07D5  0E74               	swapf	display@i,w
+  1267  07D6  390F               	andlw	15
+  1268  07D7  00F4               	movwf	display@i
+  1269  07D8  0E75               	swapf	display@i+1,w
+  1270  07D9  39F0               	andlw	240
+  1271  07DA  04F4               	iorwf	display@i,f
+  1272  07DB  0E75               	swapf	display@i+1,w
+  1273  07DC  390F               	andlw	15
+  1274  07DD  00F5               	movwf	display@i+1
+  1275  07DE  30F0               	movlw	240
+  1276  07DF  1DF5               	btfss	display@i+1,3
+  1277  07E0  3000               	movlw	0
+  1278  07E1  04F5               	iorwf	display@i+1,f
+  1279  07E2                     l978:	
+  1280                           
+  1281                           ;clock_test.c: 186:      PORTD=table2[i];
+  1282  07E2  0874               	movf	display@i,w
+  1283  07E3  3E01               	addlw	low ((_table2-__stringbase)| (0+32768))
+  1284  07E4  0084               	movwf	4
+  1285  07E5  120A  118A  2003  120A  118A  	fcall	stringdir
+  1286  07EA  0088               	movwf	8	;volatile
+  1287  07EB                     l980:	
+  1288                           
+  1289                           ;clock_test.c: 187:      PORTA=0x3e;
+  1290  07EB  303E               	movlw	62
+  1291  07EC  0085               	movwf	5	;volatile
+  1292  07ED                     l982:	
+  1293                           
+  1294                           ;clock_test.c: 188:      delay();
+  1295  07ED  120A  118A  261B  120A  118A  	fcall	_delay
+  1296  07F2                     l86:	
+  1297  07F2  0008               	return
+  1298  07F3                     __end_of_display:	
+  1299                           
+  1300                           	psect	text8
+  1301  061B                     __ptext8:	
+  1302 ;; *************** function _delay *****************
+  1303 ;; Defined at:
+  1304 ;;		line 193 in file "clock_test.c"
+  1305 ;; Parameters:    Size  Location     Type
+  1306 ;;		None
+  1307 ;; Auto vars:     Size  Location     Type
+  1308 ;;  i               2    0[COMMON] int 
+  1309 ;; Return value:  Size  Location     Type
+  1310 ;;                  1    wreg      void 
+  1311 ;; Registers used:
+  1312 ;;		wreg, status,2, status,0
+  1313 ;; Tracked objects:
+  1314 ;;		On entry : 0/0
+  1315 ;;		On exit  : 0/0
+  1316 ;;		Unchanged: 0/0
+  1317 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1318 ;;      Params:         0       0       0       0       0
+  1319 ;;      Locals:         2       0       0       0       0
+  1320 ;;      Temps:          0       0       0       0       0
+  1321 ;;      Totals:         2       0       0       0       0
+  1322 ;;Total ram usage:        2 bytes
+  1323 ;; Hardware stack levels used:    1
+  1324 ;; This function calls:
+  1325 ;;		Nothing
+  1326 ;; This function is called by:
+  1327 ;;		_display
+  1328 ;; This function uses a non-reentrant model
+  1329 ;;
+  1330                           
+  1331                           
+  1332                           ;psect for function _delay
+  1333  061B                     _delay:	
+  1334  061B                     l884:	
+  1335                           ;incstack = 0
+  1336                           ; Regs used in _delay: [wreg+status,2+status,0]
+  1337                           
+  1338                           
+  1339                           ;clock_test.c: 195:      int i;;clock_test.c: 196:      for(i=0x64;i--;);
+  1340  061B  3064               	movlw	100
+  1341  061C  00F0               	movwf	delay@i
+  1342  061D  3000               	movlw	0
+  1343  061E  00F1               	movwf	delay@i+1
+  1344  061F                     l886:	
+  1345  061F  30FF               	movlw	255
+  1346  0620  07F0               	addwf	delay@i,f
+  1347  0621  1803               	skipnc
+  1348  0622  0AF1               	incf	delay@i+1,f
+  1349  0623  30FF               	movlw	255
+  1350  0624  07F1               	addwf	delay@i+1,f
+  1351  0625  0A70               	incf	delay@i,w
+  1352  0626  1D03               	skipz
+  1353  0627  2E2C               	goto	u131
+  1354  0628  0A71               	incf	delay@i+1,w
+  1355  0629  1D03               	btfss	3,2
+  1356  062A  2E2C               	goto	u131
+  1357  062B  2E2D               	goto	u130
+  1358  062C                     u131:	
+  1359  062C  2E1F               	goto	l886
+  1360  062D                     u130:	
+  1361  062D                     l92:	
+  1362  062D  0008               	return
+  1363  062E                     __end_of_delay:	
+  1364  007E                     btemp	set	126	;btemp
+  1365  007E                     wtemp0	set	126
+
+
+Data Sizes:
+    Strings     0
+    Constant    18
+    Data        0
+    BSS         7
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      8       8
+    BANK0            80      0       7
+    BANK1            80      0       0
+    BANK3            96      0       0
+    BANK2            96      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_get_time
+    _set_time->_time_write_1
+    _get_time->_time_read_1
+    _get_time->_time_write_1
+    _ds1302_init->_time_write_1
+    _display->_delay
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     754
+                            _display
+                        _ds1302_init
+                           _get_time
+                          _port_init
+                           _set_time
+ ---------------------------------------------------------------------------------
+ (1) _set_time                                             2     2      0     159
+                                              5 COMMON     2     2      0
+                       _time_write_1
+ ---------------------------------------------------------------------------------
+ (1) _port_init                                            0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _get_time                                             3     3      0     274
+                                              5 COMMON     3     3      0
+                        _time_read_1
+                       _time_write_1
+ ---------------------------------------------------------------------------------
+ (2) _time_read_1                                          5     5      0     115
+                                              0 COMMON     5     5      0
+ ---------------------------------------------------------------------------------
+ (1) _ds1302_init                                          0     0      0      91
+                       _time_write_1
+ ---------------------------------------------------------------------------------
+ (2) _time_write_1                                         5     5      0      91
+                                              0 COMMON     5     5      0
+ ---------------------------------------------------------------------------------
+ (1) _display                                              4     4      0     230
+                                              2 COMMON     4     4      0
+                              _delay
+ ---------------------------------------------------------------------------------
+ (2) _delay                                                2     2      0      23
+                                              0 COMMON     2     2      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _display
+     _delay
+   _ds1302_init
+     _time_write_1
+   _get_time
+     _time_read_1
+     _time_write_1
+   _port_init
+   _set_time
+     _time_write_1
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      8       8       1       57.1%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+ABS                  0      0       F       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      0       7       5        8.8%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK3            60      0       0       8        0.0%
+BANK3               60      0       0       9        0.0%
+BITBANK2            60      0       0      10        0.0%
+BANK2               60      0       0      11        0.0%
+DATA                 0      0       F      12        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.10 build 88905656 
+Symbol Table                                                                                   Mon Nov 25 18:18:53 2019
+
+                      pc 0002                       l61 06E4                       l70 0663  
+                     l62 06E7                       l71 0687                       l73 068A  
+                     l57 0642                       l66 06B5                       l82 061A  
+                     l67 06B8                       l92 062D                       l76 06EE  
+                     l77 0715                       l86 07F2                       l79 071C  
+                     u90 066B                       u91 066A                       fsr 0004  
+                    l730 060F                      l732 0611                      l910 068B  
+                    l734 0614                      l920 0696                      l912 068E  
+                    l736 0618                      l728 060B                      l904 06C4  
+                    l930 072F                      l850 066B                      l922 06A2  
+                    l914 0694                      l906 06D1                      l940 0751  
+                    l932 0737                      l852 066C                      l844 0661  
+                    l860 06E8                      l924 06A8                      l908 06D7  
+                    l950 0778                      l942 075E                      l934 0740  
+                    l926 071D                      l854 0673                      l870 06F8  
+                    l862 06E9                      l960 07A0                      l952 0782  
+                    l944 0767                      l936 0742                      l928 0723  
+                    l856 0674                      l880 071B                      l872 06FC  
+                    l970 07C4                      l962 07A9                      l954 0784  
+                    l946 0769                      l938 0747                      l858 067A  
+                    l890 0633                      l874 0701                      l884 061B  
+                    l980 07EB                      l972 07C6                      l964 07AB  
+                    l956 0789                      l948 076E                      l892 063F  
+                    l876 0702                      l868 06F1                      l886 061F  
+                    l982 07ED                      l974 07CB                      l966 07B0  
+                    l958 0793                      l878 0708                      l894 06B9  
+                    l990 0652                      l976 07D5                      l968 07BA  
+                    l888 062E                      l896 06BC                      l992 0657  
+                    l984 0643                      l978 07E2                      l898 06C2  
+                    l986 0648                      l988 064D                      _RB0 0030  
+                    _RB1 0031                      _RB4 0034                      _RB5 0035  
+                    u100 0687                      u101 0686                      u110 06FC  
+                    u111 06FB                      u120 0715                      u105 0683  
+                    u121 0714                      u130 062D                      u131 062C  
+                    u140 06E4                      u125 0711                      u141 06E3  
+                    u150 06B5                      u151 06B4                      u160 0723  
+                    u161 0722                      u145 06E0                      u155 06B1  
+                    fsr0 0004                      indf 0000             __CFG_FOSC$HS 0000  
+           __CFG_LVP$OFF 0000                     _main 0643                     btemp 007E  
+                   start 0000                    ?_main 0070            __CFG_WDTE$OFF 0000  
+                  _PORTA 0005                    _PORTD 0008                    _TRISA 0085  
+                  _TRISB 0086                    _TRISD 0088            __CFG_PWRTE$ON 0000  
+        __end_of_display 07F3                    _delay 061B                    _table 0013  
+         __CFG_BOREN$OFF 0000                    pclath 000A                    status 0003  
+                  wtemp0 007E            ??_ds1302_init 0075          __initialization 07F3  
+           __end_of_main 0660                   ??_main 0078                   ?_delay 0070  
+                 _ADCON1 009F                   _TRISB4 0434         __end_of_get_time 06B9  
+    __end_of_ds1302_init 0643                   _table1 0020                   _table2 0009  
+                 delay@i 0070                ??_display 0072             ?_time_read_1 0070  
+    time_write_1@time_tx 0074         __end_of_set_time 06E8  __end_of__initialization 07FC  
+         __pcstackCOMMON 0070            __end_of_delay 062E            __end_of_table 001B  
+                ??_delay 0070               __pbssBANK0 0020              _ds1302_init 062E  
+             __pmaintext 0643       time_read_1@time_rx 0074       __size_of_port_init 0010  
+              ?_get_time 0070               __stringtab 0003                ?_set_time 0070  
+                __ptext1 06B9                  __ptext2 060B                  __ptext3 068B  
+                __ptext4 06E8                  __ptext5 062E                  __ptext6 0660  
+                __ptext7 071D                  __ptext8 061B                  _display 071D  
+   __size_of_time_read_1 0035               ??_get_time 0075     end_of_initialization 07FC  
+          ?_time_write_1 0070               ??_set_time 0075        __end_of_port_init 061B  
+         ??_time_write_1 0070           __end_of_table2 0013      start_initialization 07F3  
+           ?_ds1302_init 0070                ___latbits 0002        __size_of_get_time 002E  
+      __size_of_set_time 002F                __pstrings 0003                 ?_display 0070  
+   __end_of_time_write_1 068B           __size_of_delay 0013                _port_init 060B  
+            __stringbase 0008            ??_time_read_1 0070                get_time@i 0076  
+   __size_of_ds1302_init 0015               ?_port_init 0070       __end_of__stringtab 0009  
+       __size_of_display 00D6      __end_of_time_read_1 071D                 _get_time 068B  
+          __size_of_main 001D                set_time@i 0075                 _set_time 06B9  
+  __size_of_time_write_1 002B                 display@i 0074                stringcode 0003  
+           _time_write_1 0660              ??_port_init 0070               _OPTION_REG 0081  
+            _time_read_1 06E8             time_read_1@j 0072                 stringdir 0003  
+               stringtab 0003            time_write_1@j 0072  
